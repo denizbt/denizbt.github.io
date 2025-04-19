@@ -7,7 +7,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 1;
   font-family: Verdana, sans-serif;
   background-color: var(--color-bg);
 }
@@ -60,13 +60,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Combined profile and info section */
 .profile-info-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 80px;
-  /* Increased gap between image and text */
   width: 100%;
   max-width: 100%;
   padding: 0 5%;
@@ -175,10 +173,11 @@ body {
 
 /* Project Cards Styles */
 .project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  gap: 50px;
+  justify-items: center;
   margin-top: 40px;
   width: 100%;
   max-width: 1200px;
@@ -188,6 +187,7 @@ body {
 .project-card {
   background-color: var(--color-white);
   border-radius: 15px;
+  gap: 10px;
   border: 2px solid #ddd;
   padding: 24px;
   width: 100%;
@@ -202,6 +202,19 @@ body {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* mobile devices for project cards */
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+    /* 1 column on small screens */
+    gap: 16px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
 }
 
 .project-header {
@@ -263,6 +276,7 @@ body {
 }
 
 .project-skills i.skill-icon {
+  color: var(--dark-blue);
   font-size: 28px;
 }
 
@@ -286,4 +300,14 @@ body {
   .project-card {
     max-width: 100%;
   }
+}
+
+.clean-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.clean-link:hover {
+  opacity: 0.8;
 }

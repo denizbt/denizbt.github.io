@@ -3,135 +3,108 @@ layout: default
 title: Home
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="logo">denizbt</div>
-    <div class="nav-links">
-      <a href="#about" class="nav-button">About</a>
-      <a href="#projects" class="nav-button">Projects</a>
-      <a href="#research" class="nav-button">Research</a>
-      <a href="/assets/files/denizbt-resume.pdf" class="resume-button">Resumé</a>
-    </div>
-  </nav>
-
-  <div class="main-content">
-    <div class="profile-info-container" id="about">
-      <!-- left side, prof pic -->
-      <div class="profile-section">
-        <img src="/assets/images/profile-pic.png" alt="Deniz Bölöni-Turgut" class="profile-pic" />
-        <div class="social-icons">
-          <a href="mailto:db823@cornell.edu" class="icon-button"><i class="fas fa-envelope"></i></a>
-          <a href="https://linkedin.com/in/deniz-bt" class="icon-button"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/denizbt" class="icon-button"><i class="fab fa-github"></i></a>
-        </div>
+<div class="main-content">
+  <div class="profile-info-container" id="about">
+    <!-- left side, prof pic -->
+    <div class="profile-section">
+      <img src="/assets/images/profile-pic.png" alt="Deniz Bölöni-Turgut" class="profile-pic" />
+      <div class="social-icons">
+        <a href="mailto:db823@cornell.edu" class="icon-button"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/deniz-bt" class="icon-button"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/denizbt" class="icon-button"><i class="fab fa-github"></i></a>
       </div>
+    </div>
 
-      <!-- right side, bio -->
-      <div class="info-section">
-        <h1 class="name"><strong>Deniz </strong>Bölöni-Turgut</h1>
-        <p class="pronunciation">
-          /dɛniz bøløni turgut/
-          <!-- <a href="#" class="icon-button" onclick="document.getElementById('name-audio').play(); return false;"
-            aria-label="Play pronunciation">
-            <i class="fas fa-volume-up"></i>
+    <!-- right side, bio -->
+    <div class="info-section">
+      <h1 class="name"><strong>Deniz </strong>Bölöni-Turgut</h1>
+      <p class="pronunciation">
+        /dɛniz bøløni turgut/
+        <a href="#" class="icon-button" onclick="document.getElementById('name-audio').play(); return false;"
+          aria-label="Play pronunciation">
+          <i class="fas fa-volume-up"></i>
+        </a>
+        <audio id="name-audio" src="assets/files/name-audio.m4a"></audio>
+      </p>
+
+      <p class="subtitle"><em>researcher, software developer, reader</em></p>
+
+      <p class="bio">Hello! I am currently an undergraduate computer science student at Cornell University. I plan to
+        apply for computer science PhD programs in the upcoming Fall 2025 cycle, with an interest in machine learning
+        and natural language processing.</p>
+
+      <p class="bio">At Cornell, I am lucky to be advised by Dr. Claire Cardie with whom I have worked on a number of
+        different NLP research projects. I attended CMU REUSE during Summer 2023 where I worked with Dr. Claire Le
+        Goues
+        on neural decompilation of malware with security applications.</p>
+
+      <p class="bio">Outside of CS, I am an avid bookworm, have a 1.5 year streak on Duolingo and enjoy caffeinated
+        beverages of every variety. Please feel free to reach out at db823@cornell.edu.</p>
+    </div>
+  </div>
+
+  <!-- project section! -->
+  <div class="project-section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-cards">
+      <!-- MathSearch Project Card -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>
+            <a href="/projects/mathsearch/" class="clean-link">MathSearch</a>
+          </h3>
+          <a href="https://github.com/CornellDataScience/MathSearch" class="github-link">
+            <i class="fab fa-github"></i>
           </a>
-          <audio id="name-audio" src="assets/files/temp.m4a"></audio> -->
-        </p>
+        </div>
 
-        <p class="subtitle"><em>researcher, software developer, reader</em></p>
+        <div class="project-description">
+          <p>coming soon!</p>
+        </div>
 
-        <p class="bio">Hello! I am currently an undergraduate computer science student at Cornell University. I plan to
-          apply for computer science PhD programs in the upcoming Fall 2025 cycle, with an interest in machine learning
-          and natural language processing.</p>
-
-        <p class="bio">At Cornell, I am lucky to be advised by Dr. Claire Cardie with whom I have worked on a number of
-          different NLP research projects. I attended CMU REUSE during Summer 2023 where I worked with Dr. Claire Le
-          Goues
-          on neural decompilation of malware with security applications.</p>
-
-        <p class="bio">Outside of CS, I am an avid bookworm, have a 1.5 year streak on Duolingo and enjoy caffeinated
-          beverages of every variety. Please feel free to reach out at db823@cornell.edu.</p>
+        <div class="project-footer">
+          <div class="project-skills">
+            <i class="fab fa-python skill-icon"></i>
+            <i class="fab fa-aws skill-icon"></i>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- project section! -->
-    <div class="project-section" id="projects">
-      <h2>Projects</h2>
-
-      <div class="project-cards">
-        <!-- MathSearch Project Card -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>MathSearch</h3>
-            <a href="#" class="github-link">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-
-          <div class="project-description">
-            <p>coming soon!</p>
-          </div>
-
-          <div class="project-footer">
-            <div class="project-skills">
-              <i class="fab fa-python skill-icon"></i>
-              <i class="fab fa-aws skill-icon"></i>
-              <span class="skill-label">skill icons</span>
-            </div>
-          </div>
+      <!-- PaperModeration Project Card -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>PaperModeration</h3>
         </div>
 
-        <!-- PaperModeration Project Card -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>PaperModeration</h3>
-            <a href="#" class="github-link">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-
-          <div class="project-description">
-            <p>coming soon!</p>
-          </div>
-
-          <div class="project-footer">
-            <div class="project-skills">
-              <i class="fab fa-python skill-icon"></i>
-              <span class="hugging-face-emoji">🤗</span>
-              <span class="skill-label">skill icons</span>
-            </div>
-          </div>
+        <div class="project-description">
+          <p>coming soon!</p>
         </div>
 
-        <!-- OScrabble Project Card -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>OScrabble</h3>
-            <a href="#" class="github-link">
-              <i class="fab fa-github"></i>
-            </a>
+        <div class="project-footer">
+          <div class="project-skills">
+            <i class="fab fa-python skill-icon"></i>
+            <span class="hugging-face-emoji">🤗</span>
           </div>
+        </div>
+      </div>
 
-          <div class="project-description">
-            <p>coming soon!</p>
-          </div>
+      <!-- OScrabble Project Card -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>OScrabble</h3>
+          <a href="https://github.com/denizbt/ocaml-scrabble" class="github-link">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
 
-          <div class="project-footer">
-          </div>
+        <div class="project-description">
+          <p>coming soon!</p>
+        </div>
+
+        <div class="project-footer">
         </div>
       </div>
     </div>
   </div>
-</body>
-
-</html>
+</div>
