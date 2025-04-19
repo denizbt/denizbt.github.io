@@ -1,0 +1,289 @@
+:root {
+  --color-bg: #f4f7fa;
+  --dark-blue: #1A629D;
+  --light-blue: #B3DAF1;
+  --color-text: #000;
+  --color-white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  background-color: var(--color-bg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--color-bg);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--dark-blue);
+  margin-left: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.nav-button,
+.resume-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.nav-button {
+  background-color: var(--dark-blue);
+  color: var(--color-white);
+}
+
+.resume-button {
+  background-color: var(--light-blue);
+  color: var(--color-text);
+  margin-right: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  gap: 60px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Combined profile and info section */
+.profile-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  /* Increased gap between image and text */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  margin: 0 auto 60px auto;
+  /* Center the container */
+}
+
+/* left, profile image */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* right, bio text */
+.info-section {
+  flex: 1;
+  max-width: none;
+  text-align: left;
+}
+
+.name {
+  font-weight: normal;
+  font-size: 40px;
+}
+
+.pronunciation {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.subtitle,
+.bio {
+  font-size: 18px;
+}
+
+/* Full-width project section */
+.project-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0;
+  background-color: var(--color-bg);
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.project-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.icon-button {
+  font-size: 24px;
+  color: var(--dark-blue);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.icon-button:hover {
+  color: var(--light-blue);
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer {
+  background-color: var(--dark-blue);
+  color: var(--color-white);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-info-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .info-section {
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+/* Project Cards Styles */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.project-card {
+  background-color: var(--color-white);
+  border-radius: 15px;
+  border: 2px solid #ddd;
+  padding: 24px;
+  width: 100%;
+  max-width: 350px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-header h3 {
+  font-size: 24px;
+  margin: 0;
+  color: var(--dark-blue);
+}
+
+.github-link {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.github-link i {
+  font-size: 32px;
+  color: var(--dark-blue);
+  transition: color 0.3s ease;
+}
+
+.github-link:hover i {
+  color: #333;
+}
+
+.project-description {
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.project-description p {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.project-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.project-skills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.project-skills i.skill-icon {
+  font-size: 28px;
+}
+
+.hugging-face-emoji {
+  font-size: 32px;
+}
+
+.skill-label {
+  margin-left: auto;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive adjustments for project cards */
+@media (max-width: 768px) {
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
