@@ -5,6 +5,12 @@
   --color-text: #000;
   --light-gray: #e4e4e4bd;
   --body-text: 18px;
+  --home-page-width: 85%;
+}
+
+html {
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -12,11 +18,6 @@ body {
   margin: 1;
   font-family: 'Lato', sans-serif;
   background-color: var(--color-bg);
-}
-
-html {
-  height: 100%;
-  margin: 0;
 }
 
 .page-wrapper {
@@ -27,22 +28,28 @@ html {
 
 .main-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 0;
+  gap: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+/* Navigation */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--light-gray);
-  padding: 20px 0;
-  /* Increased from 15px to 20px for more height */
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  /* Increased horizontal padding from 20px to 40px */
 }
 
 .nav-button,
@@ -78,9 +85,8 @@ html {
 
 .logo {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--dark-blue);
-  /* margin-left: 20px; */
   margin-left: 0;
 }
 
@@ -89,35 +95,19 @@ html {
   color: inherit;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  /* Add specific top padding to account for navbar */
-  padding-bottom: 0;
-  gap: 0;
-  /* Remove gap between elements */
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
+/* Profile Section */
 .profile-info-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* align at top */
   gap: 80px;
-  width: 100%;
-  max-width: 100%;
+  width: var(--home-page-width);
+  margin: 0 auto;
   padding: 0 5%;
   box-sizing: border-box;
-  margin-top: 0;
-  margin-bottom: 0;
   min-height: 100vh;
 }
 
-/* left, profile image */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -132,7 +122,6 @@ html {
   object-fit: cover;
 }
 
-/* right, bio text */
 .info-section {
   flex: 1;
   max-width: none;
@@ -155,7 +144,7 @@ html {
   font-size: var(--body-text);
 }
 
-/* Full-width project section */
+/* Project Section */
 .project-section {
   width: 100%;
   min-height: 100vh;
@@ -168,9 +157,13 @@ html {
   box-sizing: border-box;
 }
 
+.timeline-container h2,
 .project-section h2 {
+  text-align: center;
+  font-weight: 700;
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .project-section p {
@@ -179,52 +172,61 @@ html {
   text-align: center;
 }
 
-.icon-button {
-  font-size: 24px;
-  color: var(--dark-blue);
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.icon-button:hover {
-  color: var(--light-blue);
-}
-
-.social-icons {
-  display: flex;
-  gap: 20px;
-}
-
-.site-footer {
+/* Timeline */
+.timeline-container {
   width: 100%;
-  background-color: var(--dark-blue);
-  color: white;
+  overflow-x: auto;
+  padding: 2rem 0;
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  padding: 1rem 0;
+  gap: 80px;
+  border-top: 2px solid #ccc;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.timeline-event {
+  position: relative;
   text-align: center;
-  /* padding: 5px 0; */
-  font-size: 14px;
+  min-width: 150px;
+  padding-top: 30px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .profile-info-container {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  .info-section {
-    text-align: center;
-    padding: 0 10px;
-  }
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: var(--light-blue);
+  border-radius: 50%;
+  z-index: 2;
 }
 
-/* Project Cards Styles */
+.event-date {
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.event-desc {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Project Cards */
 .project-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 columns */
   gap: 50px;
   justify-items: center;
-  margin-top: 40px;
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
@@ -248,19 +250,6 @@ html {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* mobile devices for project cards */
-@media (max-width: 768px) {
-  .project-cards {
-    grid-template-columns: 1fr;
-    /* 1 column on small screens */
-    gap: 16px;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
 }
 
 .project-header {
@@ -330,9 +319,53 @@ html {
   font-size: 32px;
 }
 
-/* Responsive adjustments for project cards */
+/* Social and Misc */
+.icon-button {
+  font-size: 24px;
+  color: var(--dark-blue);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.clean-link {
+  text-decoration: underline;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.clean-link:hover,
+.icon-button:hover {
+  opacity: 0.7;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer {
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .profile-info-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .info-section {
+    text-align: center;
+    padding: 0 10px;
+  }
+
   .project-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
     flex-direction: column;
     align-items: center;
   }
@@ -340,14 +373,4 @@ html {
   .project-card {
     max-width: 100%;
   }
-}
-
-.clean-link {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.2s ease;
-}
-
-.clean-link:hover {
-  opacity: 0.8;
 }
