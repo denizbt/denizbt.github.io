@@ -1,7 +1,7 @@
 ---
 layout: project-desc
 title: "MathSearch"
-project_logo: /assets/images/mathsearch-logo.png
+project_logo: /assets/images/mathsearch-logo.svg
 project_date: September 2023 - May 2024
 project_role: Technical Lead (Cornell Data Science)
 permalink: /projects/mathsearch/

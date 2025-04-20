@@ -4,46 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  </head>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="logo">denizbt</div>
-    <div class="nav-links">
-      <a href="#about" class="nav-button">About</a>
-      <a href="#projects" class="nav-button">Projects</a>
-      <a href="#research" class="nav-button">Research</a>
-      <a href="/assets/files/denizbt-resume.pdf" class="resume-button">Resumé</a>
-    </div>
-  </nav>
+  <div class="page-wrapper">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">denizbt</a>
+      </div>
+      <div class="nav-links">
+        <a href="/#about" class="nav-button">About</a>
+        <a href="/#projects" class="nav-button">Projects</a>
+        <a href="/#research" class="nav-button">Research</a>
+        <a href="/assets/files/denizbt-resume.pdf" class="resume-button">Resumé</a>
+      </div>
+    </nav>
 
-  {{ content }}
+    <main class="main-content">
+      {{ content }}
+    </main>
 
-</body>
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <p>&copy; {{ site.time | date: "%Y" }} Deniz Bölöni-Turgut. All rights reserved.</p>
-    <!-- <div class="footer-icons">
-      <a href="mailto:db823@cornell.edu" class="icon-button"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/in/deniz-bt" class="icon-button"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/denizbt" class="icon-button"><i class="fab fa-github"></i></a>
-    </div> -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; {{ site.time | date: "%Y" }} Deniz Bölöni-Turgut. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
-</footer>
+</body>
 
 </html>

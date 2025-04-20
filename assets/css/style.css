@@ -3,58 +3,100 @@
   --dark-blue: #1A629D;
   --light-blue: #B3DAF1;
   --color-text: #000;
-  --color-white: #fff;
+  --light-gray: #e4e4e4bd;
+  --body-text: 18px;
 }
 
 body {
+  height: 100%;
   margin: 1;
-  font-family: Verdana, sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: var(--color-bg);
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light-gray);
+  padding: 20px 0;
+  /* Increased from 15px to 20px for more height */
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background-color: var(--color-bg);
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: var(--dark-blue);
-  margin-left: 20px;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
+  align-items: center;
+  padding: 20px 40px;
+  /* Increased horizontal padding from 20px to 40px */
 }
 
 .nav-button,
 .resume-button {
   padding: 10px 20px;
   border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: none;
+  margin: 0 5px;
 }
 
 .nav-button {
   background-color: var(--dark-blue);
-  color: var(--color-white);
+  color: white;
 }
 
 .resume-button {
   background-color: var(--light-blue);
   color: var(--color-text);
-  margin-right: 20px;
+  margin-right: 40px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-grow: 1;
+  align-items: center;
+  margin-right: 0;
+  padding-right: 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--dark-blue);
+  /* margin-left: 20px; */
+  margin-left: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 50px 0;
-  gap: 60px;
+  padding-top: 100px;
+  /* Add specific top padding to account for navbar */
+  padding-bottom: 0;
+  gap: 0;
+  /* Remove gap between elements */
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -63,14 +105,16 @@ body {
 .profile-info-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  /* align at top */
   gap: 80px;
   width: 100%;
   max-width: 100%;
   padding: 0 5%;
   box-sizing: border-box;
-  margin: 0 auto 60px auto;
-  /* Center the container */
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 100vh;
 }
 
 /* left, profile image */
@@ -96,18 +140,19 @@ body {
 }
 
 .name {
-  font-weight: normal;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
   font-size: 40px;
+  margin-bottom: 10px;
 }
 
-.pronunciation {
+.pronunciation,
+.subtitle {
   font-size: 22px;
-  line-height: 1.6;
 }
 
-.subtitle,
 .bio {
-  font-size: 18px;
+  font-size: var(--body-text);
 }
 
 /* Full-width project section */
@@ -151,10 +196,11 @@ body {
 }
 
 .site-footer {
+  width: 100%;
   background-color: var(--dark-blue);
-  color: var(--color-white);
+  color: white;
   text-align: center;
-  padding: 5px 0;
+  /* padding: 5px 0; */
   font-size: 14px;
 }
 
@@ -192,7 +238,7 @@ body {
   padding: 24px;
   width: 100%;
   max-width: 350px;
-  min-height: 350px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -270,9 +316,9 @@ body {
   gap: 10px;
 }
 
-.skill-icon {
-  width: 32px;
-  height: 32px;
+.project-skills img {
+  width: 28px;
+  height: auto;
 }
 
 .project-skills i.skill-icon {
@@ -282,12 +328,6 @@ body {
 
 .hugging-face-emoji {
   font-size: 32px;
-}
-
-.skill-label {
-  margin-left: auto;
-  color: #666;
-  font-size: 14px;
 }
 
 /* Responsive adjustments for project cards */

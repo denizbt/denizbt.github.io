@@ -3,11 +3,11 @@ layout: default
 title: Home
 ---
 
-<div class="main-content">
-  <div class="profile-info-container" id="about">
+<div class="main-content" id="about">
+  <div class="profile-info-container">
     <!-- left side, prof pic -->
     <div class="profile-section">
-      <img src="/assets/images/profile-pic.png" alt="Deniz Bölöni-Turgut" class="profile-pic" />
+      <img src="/assets/images/web-profile.jpeg" alt="Deniz Bölöni-Turgut" class="profile-pic" />
       <div class="social-icons">
         <a href="mailto:db823@cornell.edu" class="icon-button"><i class="fas fa-envelope"></i></a>
         <a href="https://linkedin.com/in/deniz-bt" class="icon-button"><i class="fab fa-linkedin"></i></a>
@@ -17,7 +17,7 @@ title: Home
 
     <!-- right side, bio -->
     <div class="info-section">
-      <h1 class="name"><strong>Deniz </strong>Bölöni-Turgut</h1>
+      <h1 class="name">Deniz Bölöni-Turgut</h1>
       <p class="pronunciation">
         /dɛniz bøløni turgut/
         <a href="#" class="icon-button" onclick="document.getElementById('name-audio').play(); return false;"
@@ -35,8 +35,10 @@ title: Home
 
       <p class="bio">At Cornell, I am lucky to be advised by Dr. Claire Cardie with whom I have worked on a number of
         different NLP research projects. I attended CMU REUSE during Summer 2023 where I worked with Dr. Claire Le
-        Goues
-        on neural decompilation of malware with security applications.</p>
+        Goues on neural decompilation of malware with security applications.</p>
+
+      <p class="bio">I am also a Data Science lead for Cornell Data Science, and TA for CS 2800 (Mathematical
+        Foundations of Computing).</p>
 
       <p class="bio">Outside of CS, I am an avid bookworm, have a 1.5 year streak on Duolingo and enjoy caffeinated
         beverages of every variety. Please feel free to reach out at db823@cornell.edu.</p>
@@ -45,8 +47,7 @@ title: Home
 
   <!-- project section! -->
   <div class="project-section" id="projects">
-    <h2>Projects</h2>
-
+    <h2><strong>Projects</strong></h2>
     <div class="project-cards">
       <!-- MathSearch Project Card -->
       <div class="project-card">
@@ -60,15 +61,17 @@ title: Home
         </div>
 
         <div class="project-description">
-          <p>coming soon!</p>
+          <p>A next generation search engine for researchers that supports searching for equations inside PDFs with
+            LaTeX.</p>
         </div>
 
         <div class="project-footer">
           <div class="project-skills">
-            <i class="fab fa-python skill-icon"></i>
+            <img src="/assets/images/python-logo-only.svg">
             <i class="fab fa-aws skill-icon"></i>
           </div>
         </div>
+
       </div>
 
       <!-- PaperModeration Project Card -->
@@ -78,12 +81,12 @@ title: Home
         </div>
 
         <div class="project-description">
-          <p>coming soon!</p>
+          <p>A natural language processing system for filtering paper submissions to arXiv.org.</p>
         </div>
 
         <div class="project-footer">
           <div class="project-skills">
-            <i class="fab fa-python skill-icon"></i>
+            <img src="/assets/images/python-logo-only.svg">
             <span class="hugging-face-emoji">🤗</span>
           </div>
         </div>
@@ -99,10 +102,60 @@ title: Home
         </div>
 
         <div class="project-description">
-          <p>coming soon!</p>
+          <p>A command-line implementation of Scrabble coded entirely in the functional programming language OCaml.</p>
         </div>
-
         <div class="project-footer">
+          <div class="project-skills">
+            <a href="https://ocaml.org" class="clean-link">
+              <img src="/assets/images/ocaml-icon.svg" alt="OCaml Logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- research section! -->
+    <div class="project-section" id="research">
+      <h2><strong>Research</strong></h2>
+      <div class="project-cards">
+        <!-- Cornell NLP -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>
+              <a>Undergraduate Researcher (Cornell NLP Group)</a>
+            </h3>
+          </div>
+          <div class="project-description">
+            <p>Worked on several NLP research projects at Cornell University where I am advised by Dr. Claire Cardie.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="project-skills">
+              <img src="/assets/images/python-logo-only.svg">
+              <a href="https://pytorch.org/"><img src="/assets/images/pytorch-icon.svg"></a>
+            </div>
+          </div>
+        </div>
+        <!-- CMU REUSE -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>
+              <a href="/research/cmu-reuse/" class="clean-link">Research Assistant @ CMU</a>
+            </h3>
+            <a href="/assets/files/cmu_reuse_poster.pdf" class="github-link">
+              <i class="fa-solid fa-file"></i>
+            </a>
+          </div>
+
+          <div class="project-description">
+            <p>Selected to conduct research at Carnegie Mellon University during Summer 2023 as part of prestigious
+              Research Experience for Undergraduates in Software Engineering.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-skills">
+              <img src="/assets/images/python-logo-only.svg">
+            </div>
+          </div>
         </div>
       </div>
     </div>
