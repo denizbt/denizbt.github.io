@@ -115,6 +115,8 @@ body {
   box-sizing: border-box;
   min-height: 90vh;
   position: relative;
+  padding-bottom: 150px;
+  /* space for bouncing arrow */
 }
 
 .profile-section {
@@ -158,13 +160,12 @@ body {
 /* Bouncing Arrow Style */
 .arrow-container {
   position: absolute;
-  bottom: 100px;
+  bottom: 110px;
   left: 0;
   right: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .arrow-down {
@@ -174,7 +175,6 @@ body {
   border-right: 20px solid transparent;
   border-top: 20px solid var(--dark-blue);
   animation: bounce 4s infinite;
-  /* Increased from 2s to 4s for slower frequency */
   cursor: pointer;
 }
 
@@ -249,6 +249,16 @@ body {
   width: fit-content;
 }
 
+.timeline {
+  display: flex;
+  position: relative;
+  padding-top: 1.5rem;
+  gap: 80px;
+  border-top: 7px solid #ccc;
+  margin: 0 auto;
+  width: fit-content;
+}
+
 .timeline-event {
   position: relative;
   text-align: center;
@@ -259,9 +269,9 @@ body {
 .timeline-event::before {
   content: "";
   position: absolute;
-  top: -28px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
   width: 16px;
   height: 16px;
   background-color: var(--dark-blue);
@@ -284,12 +294,14 @@ body {
 /* Project Cards */
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 50px;
   justify-items: center;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .project-card {
@@ -298,8 +310,8 @@ body {
   gap: 10px;
   border: 2px solid #ddd;
   padding: 24px;
-  width: 100%;
-  max-width: 350px;
+  /* width: 90%; */
+  max-width: 1200px;
   min-height: 150px;
   display: flex;
   flex-direction: column;
@@ -415,14 +427,39 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .arrow-container {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 10px 0;
+    text-align: center;
+  }
+
   .profile-info-container {
     flex-direction: column;
     padding: 0 20px;
+    padding-bottom: 0;
   }
 
   .info-section {
+    align-items: center;
     text-align: center;
     padding: 0 10px;
+  }
+
+  .profile-section {
+    align-items: center;
+    width: 100%;
+  }
+
+  .profile-pic {
+    display: block;
+    margin: 0 auto;
   }
 
   .project-cards {
@@ -433,6 +470,53 @@ body {
   }
 
   .project-card {
-    max-width: 100%;
+    max-width: 90%;
+  }
+
+  .timeline-container {
+    overflow-x: auto;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .timeline {
+    flex-direction: row;
+    gap: 40px;
+    padding: 1rem;
+    width: max-content;
+  }
+
+  .timeline-event {
+    min-width: 120px;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .timeline-event::before {
+    top: -20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .arrow-down {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--dark-blue);
+  }
+
+  .logo {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 90%;
   }
 }
