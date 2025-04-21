@@ -139,7 +139,9 @@ body {
 
 .name {
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-style: bold;
   font-size: 40px;
   margin-bottom: 10px;
 }
@@ -219,7 +221,7 @@ body {
 .project-section h2 {
   text-align: center;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 35px;
   margin-top: 20px;
   margin-bottom: 50px;
 }
