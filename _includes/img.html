@@ -1,0 +1,6 @@
+<figure style="text-align: center; margin: 0 auto;">
+  <img src="{{ include.src }}" alt="{{ include.alt }}" loading="lazy" width="{{ include.width | default: '300px' }}" {%
+    if include.height %}height="{{ include.height }}" {% endif %}
+    style="max-width: 100%; display: block; margin: 0 auto;" />
+  <figcaption style="margin-top: 8px; font-style: italic; font-size: 0.9em;">{{ include.caption }}</figcaption>
+</figure>

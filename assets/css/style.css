@@ -6,16 +6,24 @@
   --light-gray: #e4e4e4bd;
   --body-text: 18px;
   --home-page-width: 85%;
+  --nav-bar-width: 70px
 }
 
 html {
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
 }
+
+[id] {
+  scroll-margin-top: var(--nav-bar-width);
+  /* Adjust this value based on your navbar height plus any desired offset */
+}
+
 
 body {
   height: 100%;
-  margin: 1;
+  margin: 0;
   font-family: 'Lato', sans-serif;
   background-color: var(--color-bg);
 }
@@ -30,7 +38,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 65px;
   padding-bottom: 0;
   gap: 0;
   width: 100%;
@@ -102,10 +110,11 @@ body {
   align-items: flex-start;
   gap: 80px;
   width: var(--home-page-width);
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 0 5%;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 90vh;
+  position: relative;
 }
 
 .profile-section {
@@ -144,6 +153,48 @@ body {
   font-size: var(--body-text);
 }
 
+/* Bouncing Arrow Style */
+.arrow-container {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--dark-blue);
+  animation: bounce 4s infinite;
+  /* Increased from 2s to 4s for slower frequency */
+  cursor: pointer;
+}
+
+@keyframes bounce {
+
+  0%,
+  30%,
+  60%,
+  90%,
+  100% {
+    transform: translateY(0);
+  }
+
+  45% {
+    transform: translateY(-15px);
+  }
+
+  75% {
+    transform: translateY(-8px);
+  }
+}
+
 /* Project Section */
 .project-section {
   width: 100%;
@@ -155,6 +206,13 @@ body {
   background-color: var(--color-bg);
   flex-direction: column;
   box-sizing: border-box;
+}
+
+/* Modify the last project section to have less space */
+.project-section:last-of-type {
+  min-height: auto;
+  /* Override the 100vh */
+  padding-bottom: 50px;
 }
 
 .timeline-container h2,
@@ -184,7 +242,7 @@ body {
   position: relative;
   padding: 1rem 0;
   gap: 80px;
-  border-top: 2px solid #ccc;
+  border-top: 7px solid #ccc;
   margin: 0 auto;
   width: fit-content;
 }
@@ -199,12 +257,12 @@ body {
 .timeline-event::before {
   content: "";
   position: absolute;
-  top: -23px;
+  top: -28px;
   left: 50%;
   transform: translateX(-50%);
-  width: 14px;
-  height: 14px;
-  background-color: var(--light-blue);
+  width: 16px;
+  height: 16px;
+  background-color: var(--dark-blue);
   border-radius: 50%;
   z-index: 2;
 }
@@ -349,6 +407,8 @@ body {
   color: white;
   text-align: center;
   font-size: 14px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Responsive adjustments */

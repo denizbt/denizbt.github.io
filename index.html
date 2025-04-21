@@ -37,21 +37,25 @@ title: Home
         different NLP research projects. I attended CMU REUSE during Summer 2023 where I worked with Dr. Claire Le
         Goues on neural decompilation of malware with security applications.</p>
 
-      <p class="bio">I am also a Data Science lead for Cornell Data Science, and TA for CS 2800 (Mathematical
+      <p class="bio">I am also a Data Science lead for <a href="https://cornelldata.science/" class="clean-link">Cornell
+          Data Science</a>, and TA for CS 2800 (Mathematical
         Foundations of Computing).</p>
 
       <p class="bio">Outside of CS, I am an avid bookworm, have a 1.5 year streak on Duolingo and enjoy caffeinated
         beverages of every variety. Please feel free to reach out at db823@cornell.edu.</p>
     </div>
+    <div class="arrow-container">
+      <div class="arrow-down" onclick="scrollWithNavbarOffset('timeline-container')"></div>
+    </div>
   </div>
 
   <!-- timeline section! -->
-  <div class="timeline-container">
+  <div class="timeline-container" id="timeline-container">
     <h2>What I've Been Up To 😊</h2>
     <div class="timeline">
       <div class="timeline-event">
         <div class="event-date">Jan 2025</div>
-        <div class="event-desc">Received Honorable Mention for CRA Undergraduate Researcher Awards.</div>
+        <div class="event-desc">Received Honorable Mention for CRA Undergraduate Researcher Award.</div>
       </div>
       <div class="timeline-event">
         <div class="event-date">May 2025</div>
@@ -64,7 +68,6 @@ title: Home
         <div class="event-date">June 2025</div>
         <div class="event-desc">Starting internship at Amazon in NYC.</div>
       </div>
-      <!-- Add more events here -->
     </div>
   </div>
 
@@ -185,3 +188,28 @@ title: Home
     </div>
   </div>
 </div>
+
+<script>
+  function scrollWithNavbarOffset(elementId) {
+    // Get the navbar height dynamically
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+    // Get the target element
+    const targetElement = document.getElementById(elementId);
+
+    if (targetElement) {
+      // Calculate the element's position relative to the document
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+      // Add an offset buffer (adjust as needed)
+      const offset = 30;
+
+      // Scroll to the position with navbar height and buffer considered
+      window.scrollTo({
+        top: elementPosition - navbarHeight - offset,
+        behavior: 'smooth'
+      });
+    }
+  }
+</script>

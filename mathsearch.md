@@ -18,3 +18,7 @@ As Technical Lead, I led a team of 15 frontend, backend, and fullstack developer
 Our primary challenge was our financial budget. As a student organization, we had a limited budget for perpetual deployment. Due to this, we conducted a cost-benefit analysis to optimize resource usage and cut costs without compromising performance.  For instance, we chose a no-cost String similarity Python package as the final step in our pipeline because it was more accurate and cost-effective than using the GPT API or tree similarity metrics. Unfortunately, the cost accrued from AWS services (especially Sagemaker which we used to host the YoloV5 model), was too high for us to keep our product deployed.
 
 From this project, I learned how important it is to keep the future in mind even as you work hard on ironing out the details of a software project. I am proud of the work I did on MathSearch, and hope that one day we will have the funds to deploy it continuously.
+
+{% include img.html src="/assets/images/mathsearch-team.png" width="500px" caption="Our Team!" %}
+<br>
+{% include img.html src="/assets/images/mathsearch-pipeline.png" width="800px" caption="Full ML & Backend Pipeline" %}
