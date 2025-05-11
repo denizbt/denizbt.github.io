@@ -9,9 +9,9 @@ title: Home
     <div class="profile-section">
       <img src="/assets/images/web-profile.jpeg" alt="Deniz Bölöni-Turgut" class="profile-pic" />
       <div class="social-icons">
-        <a href="mailto:db823@cornell.edu" class="icon-button"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/deniz-bt" class="icon-button"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/denizbt" class="icon-button"><i class="fab fa-github"></i></a>
+        <a href="mailto:db823@cornell.edu" class="icon-button"><i class="fas fa-envelope fa-sm"></i></a>
+        <a href="https://linkedin.com/in/deniz-bt" class="icon-button"><i class="fab fa-linkedin fa-sm"></i></a>
+        <a href="https://github.com/denizbt" class="icon-button"><i class="fab fa-github fa-sm"></i></a>
       </div>
     </div>
 
@@ -19,7 +19,7 @@ title: Home
     <div class="info-section">
       <h1 class="name">Deniz Bölöni-Turgut</h1>
       <p class="pronunciation">
-        /dɛniz bøløni turgut/
+        /dɛˈniz bøløni turgut/
         <a href="#" class="icon-button" onclick="document.getElementById('name-audio').play(); return false;"
           aria-label="Play pronunciation">
           <i class="fas fa-volume-up"></i>
@@ -45,28 +45,38 @@ title: Home
         beverages of every variety. Please feel free to reach out at db823@cornell.edu.</p>
     </div>
     <div class="arrow-container">
-      <div class="arrow-down" onclick="scrollWithNavbarOffset('timeline-container')"></div>
+      <div class="arrow-down" onclick="scrollWithNavbarOffset('projects')"></div>
     </div>
   </div>
 
   <!-- timeline section! -->
-  <div class="timeline-container" id="timeline-container">
-    <h2>What I've Been Up To 😊</h2>
-    <div class="timeline">
-      <div class="timeline-event">
-        <div class="event-date">Jan 2025</div>
-        <div class="event-desc">Received Honorable Mention for CRA Undergraduate Researcher Award.</div>
-      </div>
-      <div class="timeline-event">
-        <div class="event-date">May 2025</div>
-        <div class="event-desc">Submit system to CLEF PAN 2025 <a
-            href="https://pan.webis.de/clef25/pan25-web/style-change-detection.html" class="clean-link">Style Analysis
-            Task</a>
+  <div class="timeline-section" id="experience">
+    <div class="timeline-container">
+      <h2>What I've Been Up To!</h2>
+      <!-- amazon internship -->
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-date">June 2025</span>
+          <p class="timeline-description">Starting Software Development Internship @ Amazon NYC</p>
         </div>
       </div>
-      <div class="timeline-event">
-        <div class="event-date">June 2025</div>
-        <div class="event-desc">Starting internship at Amazon in NYC.</div>
+
+      <!-- paper acceptance -->
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-date">April 2025</span>
+          <p class="timeline-description">First paper accepted to DIMVA 2025! Using deep learning for decompilation with
+            applications to malware.</p>
+        </div>
+      </div>
+
+      <!-- CRA award -->
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-date">January 2025</span>
+          <p class="timeline-description">Received Honorable Mention for CRA Outstanding Undergraduate Researcher Award
+          </p>
+        </div>
       </div>
     </div>
   </div>
