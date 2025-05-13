@@ -214,16 +214,18 @@ body {
 .name {
   font-family: "Lato", sans-serif;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   font-style: bold;
   font-size: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .pronunciation,
 .subtitle {
+  margin-top: 0;
   font-size: 20px;
-  margin-bottom: 15px;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .bio {

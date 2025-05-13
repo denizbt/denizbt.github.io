@@ -1,125 +1,266 @@
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .arrow-container {
-    display: none;
+/* Medium Screens (tablets & smaller laptops) */
+@media screen and (max-width: 992px) {
+  :root {
+    --home-page-width: 90%;
+    --section-spacing: 1.5rem;
   }
 
   .navbar {
-    flex-direction: column;
+    padding: 12px 20px;
   }
 
   .logo {
-    margin: 10px 0;
-    text-align: center;
+    margin-right: 30px;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .nav-button,
+  .resume-button {
+    font-size: 16px;
   }
 
   .profile-info-container {
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
-    padding-bottom: 0;
+    gap: 40px;
+    padding-bottom: 80px;
   }
 
   .profile-section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    order: 1;
-    /* Ensure profile pic section comes first */
   }
 
   .info-section {
-    align-items: center;
     text-align: center;
-    padding: 0 10px;
-    width: 100%;
-    order: 2;
-    /* Bio section comes second */
-    margin-top: 20px;
-    /* Add some space between profile pic and bio */
-  }
-
-  .profile-pic {
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .project-cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
   }
 
-  .project-card {
-    max-width: 90%;
-  }
-
-  .timeline-container {
-    overflow-x: auto;
-    padding: 1rem 0;
-    width: 100%;
-  }
-
-  .timeline {
-    flex-direction: row;
-    gap: 40px;
-    padding: 1rem;
-    width: max-content;
-  }
-
-  .timeline-event {
-    min-width: 120px;
-    padding-top: 20px;
-    text-align: center;
-  }
-
-  .timeline-event::before {
-    top: -20px;
+  .interests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
-/* @media screen and (max-width: 768px) {
+/* Small Screens (tablets & large phones) */
+@media screen and (max-width: 768px) {
+  :root {
+    --home-page-width: 95%;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin-right: 15px;
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-button,
+  .resume-button {
+    font-size: 15px;
+  }
+
+  .resume-button {
+    margin-right: 0;
+  }
+
+  /* Restructured profile section for mobile */
   .profile-info-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    display: block;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  .profile-section {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .info-section {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name {
+    font-size: 32px;
+    margin-bottom: 2px;
+  }
+
+  .pronunciation,
+  .subtitle {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .bio {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .section-container h2 {
+    font-size: 1.75rem;
   }
 
   .timeline-header {
     flex-direction: column;
-    align-items: flex-start;
     gap: 8px;
   }
 
   .timeline-date {
-    width: auto;
+    min-width: auto;
+    width: fit-content;
   }
 
-  .section-container {
-    padding-top: 2rem;
-  }
-} */
-
-@media (max-width: 1024px) {
-  .arrow-down {
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid var(--dark-blue);
+  .research-experience-card {
+    padding: 1.2rem;
   }
 
-  .logo {
-    margin: 10px 0;
-    text-align: center;
+  .experience-header {
+    flex-direction: column;
+    gap: 5px;
   }
 
   .project-cards {
     grid-template-columns: 1fr;
-    gap: 16px;
+  }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 576px) {
+  .navbar {
     flex-direction: column;
-    align-items: center;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .logo {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-button,
+  .resume-button {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding-top: 90px;
+  }
+
+  .profile-info-container {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .name {
+    font-size: 28px;
+    margin-bottom: 2px;
+  }
+
+  .pronunciation,
+  .subtitle {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .bio {
+    font-size: 15px;
+  }
+
+  .section-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-container {
+    padding: var(--section-spacing) 4% 0;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arrow-container {
+    bottom: 50px;
+  }
+
+  .social-icons {
+    gap: 15px;
+    justify-content: center;
   }
 
   .project-card {
-    max-width: 90%;
+    padding: 15px;
+  }
+
+  .project-header h3 {
+    font-size: 18px;
+  }
+}
+
+/* Very Small Phones */
+@media screen and (max-width: 400px) {
+  .navbar {
+    padding: 8px 5px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-button,
+  .resume-button {
+    font-size: 13px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .pronunciation,
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .bio {
+    font-size: 14px;
   }
 }
