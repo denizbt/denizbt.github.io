@@ -1,6 +1,6 @@
 :root {
   /* --color-bg: #f3f6fa; */
-  --color-bg: #f4f5f7;
+  --color-bg: #ffffff;
   --main-blue: #2c80b8;
   --light-blue: #b8e0fb;
   --med-blue: #64c4ed;
@@ -83,7 +83,7 @@ body {
 
 .nav-button,
 .resume-button {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -246,8 +246,8 @@ body {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--color-text);
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
+  /* padding-top: 0.5rem; */
+  /* border-top: 1px solid #ddd; */
 }
 
 /* Timeline Section */
@@ -316,7 +316,6 @@ body {
 }
 
 .project-card:hover,
-.research-experience-card:hover,
 .interest-area:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -531,14 +530,11 @@ body {
 }
 
 /* Research Experience Cards */
-.research-experience-card {
+.research-experience {
   background-color: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eee;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .experience-header {
@@ -549,7 +545,7 @@ body {
 }
 
 .experience-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #333;
   margin: 0;
@@ -623,6 +619,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   margin-right: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 .research-artifact:hover {
