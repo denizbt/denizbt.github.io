@@ -1,5 +1,5 @@
 ---
-layout: project-desc
+layout: writeups
 title: "MathSearch"
 project_logo: /assets/images/mathsearch-logo.svg
 project_date: September 2023 - May 2024

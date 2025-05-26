@@ -19,7 +19,7 @@ title: Home
     <div class="info-section">
       <h1 class="name">Deniz Bölöni-Turgut</h1>
       <p class="pronunciation">
-        deh-niz beu-leu-ni tur-gut
+        deh-niz beu-leu-ni toor-goot
         <a href="#" class="icon-button" onclick="document.getElementById('name-audio').play(); return false;"
           aria-label="Play pronunciation">
           <i class="fas fa-volume-up"></i>
@@ -151,13 +151,25 @@ title: Home
                 href="https://pan.webis.de/clef25/pan25-web/style-change-detection.html" class="outside-link">(PAN 2025
                 Shared Task)</a></p>
             <!-- <p class="res-proj-desc">.</p> -->
-            <span class="status-badge">In Progress</span>
+            <span class="status-badge">In Progress</span><br>
+            <!-- <a href="TODO" class="research-artifact">
+              <i class="fa-solid fa-file"></i>
+              <span>Paper</span></a> -->
+            <!-- <a href="https://github.com/denizbt/pan-styleAnalysis25" class="research-artifact">
+              <i class="fa-brands fa-github"></i>
+              <span>Code</span></a> -->
           </div>
 
           <div class="res-proj-item">
             <p class="res-proj-name">commit0</p>
             <p class="res-proj-desc">Research LLMs' ability to re-implement Python packages given only textual
               specifications and a unit test suite, i.e. starting from commit0 of a GitHub repository.</p>
+            <a href="/research/commit0/" class="research-artifact">
+              <i class="fa-brands fa-readme"></i>
+              <span>README</span></a>
+            <a href="https://github.com/MaxWhitton25/multi-agent-repo-completion" class="research-artifact">
+              <i class="fa-brands fa-github"></i>
+              <span>Code</span></a>
           </div>
           <div class="res-proj-item">
             <p class="res-proj-name">Open Ended Question Evaluation</p>
@@ -218,7 +230,7 @@ title: Home
       </div>
     </div>
 
-    <div class="research-section interests">
+    <!-- <div class="research-section interests">
       <h3 class="research-heading">Research Interests</h3>
       <div class="interests-grid">
         <div class="interest-area">
@@ -231,101 +243,107 @@ title: Home
           <h4>Security Applications of ML</h4>
           <p>Using machine learning in malware analysis.</p>
         </div>
-      </div>
-    </div>
+      </div> -->
   </div>
+</div>
 
-  <!-- project section! -->
-  <div class="section-container" id="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <!-- MathSearch Project Card -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3>
-            <a href="/projects/mathsearch/" class="clean-link">MathSearch <i class="fa-brands fa-readme"
-                style="margin-left: 7px;"></i></a>
-          </h3>
-          <a href="https://github.com/CornellDataScience/MathSearch" class="github-link">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-
-        <div class="project-description">
-          <p>A next generation search engine for researchers that supports searching for equations inside PDFs with
-            LaTeX.</p>
-        </div>
-
-        <div class="project-footer">
-          <div class="project-skills">
-            <img src="/assets/images/python-logo-only.svg">
-            <i class="fab fa-aws skill-icon"></i>
-          </div>
-        </div>
-      </div>
-      <!-- OScrabble Project Card -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3>OScrabble</h3>
-          <a href="https://github.com/denizbt/ocaml-scrabble" class="github-link">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-
-        <div class="project-description">
-          <p>A command-line implementation of Scrabble coded entirely in the functional programming language OCaml.
-          </p>
-        </div>
-        <div class="project-footer">
-          <div class="project-skills">
-            <a href="https://ocaml.org" class="outside-link">
-              <img src="/assets/images/ocaml-icon.svg" alt="OCaml Logo">
-            </a>
-          </div>
-        </div>
+<!-- project section! -->
+<div class="section-container" id="projects">
+  <h2>Software Projects</h2>
+  <div class="project-cards">
+    <!-- MathSearch Project Card -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>
+          <a href="/projects/mathsearch/" class="none-link">MathSearch <i class="fa-brands fa-readme"
+              style="margin-left: 7px;"></i></a>
+        </h3>
+        <a href="https://github.com/CornellDataScience/MathSearch" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
 
-      <!-- PaperModeration Project Card -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3>PaperModeration</h3>
-        </div>
+      <div class="project-description">
+        <p>A next generation search engine for researchers that supports searching for equations inside PDFs with
+          LaTeX.</p>
+      </div>
 
-        <div class="project-description">
-          <p>A natural language processing system for filtering paper submissions to arXiv.org.</p>
-        </div>
-
-        <div class="project-footer">
-          <div class="project-skills">
-            <img src="/assets/images/python-logo-only.svg">
-            <span class="hugging-face-emoji">🤗</span>
-          </div>
+      <div class="project-footer">
+        <div class="project-skills">
+          <img src="/assets/images/python-logo-only.svg">
+          <i class="fab fa-aws skill-icon"></i>
+          <i class="fab fa-solid fa-lambda"></i>
         </div>
       </div>
     </div>
+    <!-- OScrabble Project Card -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>OScrabble</h3>
+        <a href="https://github.com/denizbt/ocaml-scrabble" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-description">
+        <p>A command-line implementation of Scrabble coded entirely in the functional programming language OCaml.
+        </p>
+      </div>
+      <div class="project-footer">
+        <div class="project-skills">
+          <a href="https://ocaml.org" class="outside-link">
+            <img src="/assets/images/ocaml-icon.svg" alt="OCaml Logo">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LoRA projects -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>LoRA Implementation</h3>
+        <a href="https://github.com/denizbt/lora-cs4782" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <div class="project-description">
+        <p>Implementation of Low Rank Adaptation from scratch for RoBERTa and DeBERTa models. Fine-tuned models and
+          compared performance to <a href="https://arxiv.org/abs/2106.09685" class="clean-link">original paper.</a> </p>
+      </div>
+
+      <div class="project-footer">
+        <div class="project-skills">
+          <img src="/assets/images/python-logo-only.svg">
+          <img src="/assets/images/pytorch-icon.svg">
+          <span class="hugging-face-emoji">🤗</span>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <script>
-    function scrollWithNavbarOffset(elementId) {
-      // Get the navbar height dynamically
-      const navbar = document.querySelector('.navbar');
-      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+<script>
+  function scrollWithNavbarOffset(elementId) {
+    // Get the navbar height dynamically
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
 
-      // Get the target element
-      const targetElement = document.getElementById(elementId);
+    // Get the target element
+    const targetElement = document.getElementById(elementId);
 
-      if (targetElement) {
-        // Calculate the element's position relative to the document
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    if (targetElement) {
+      // Calculate the element's position relative to the document
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
 
-        // Add an offset buffer (adjust as needed)
-        const offset = 30;
+      // Add an offset buffer (adjust as needed)
+      const offset = 30;
 
-        // Scroll to the position with navbar height and buffer considered
-        window.scrollTo({
-          top: elementPosition - navbarHeight - offset,
-          behavior: 'smooth'
-        });
-      }
+      // Scroll to the position with navbar height and buffer considered
+      window.scrollTo({
+        top: elementPosition - navbarHeight - offset,
+        behavior: 'smooth'
+      });
     }
-  </script>
+  }
+</script>

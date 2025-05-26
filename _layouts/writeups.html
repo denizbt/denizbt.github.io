@@ -2,6 +2,21 @@
 layout: default
 ---
 
+<head>
+  <!-- include math support for all writeups.html markdown files -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
 <main class="project-container">
   <div class="project-header">
     {% if page.project_logo %}

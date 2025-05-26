@@ -1,5 +1,5 @@
 ---
-layout: project-desc
+layout: writeups
 title: "Research Experience for Undergraduates at CMU"
 project_date: May 2023 - May 2024
 project_role: Research Assistant
