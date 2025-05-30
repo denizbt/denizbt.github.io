@@ -246,8 +246,6 @@ body {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--color-text);
-  /* padding-top: 0.5rem; */
-  /* border-top: 1px solid #ddd; */
 }
 
 /* Timeline Section */
@@ -344,6 +342,7 @@ body {
   color: var(--main-blue);
   transition: color 0.2s ease;
 }
+
 
 .github-link:hover i {
   color: #333;
@@ -490,13 +489,8 @@ body {
   font-weight: 500;
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
-  background-color: white;
-  color: var(--body-text);
-}
-
-.skill-tag.tech {
   background-color: #f0f0f0;
-  color: #555;
+  color: var(--body-text);
 }
 
 .research-links {

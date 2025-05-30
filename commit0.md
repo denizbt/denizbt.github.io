@@ -1,6 +1,6 @@
 ---
 layout: writeups
-title: "commit0 (Autonomous Coding Agents)"
+title: "commit0 (Autonomous Coding Agent)"
 project_date: September 2024 - December 2024
 project_role: Undergraduate Researcher
 permalink: /research/commit0/
