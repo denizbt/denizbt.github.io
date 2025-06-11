@@ -1,2 +1,2 @@
 # denizbt.github.io
-My personal portfolio style webpage! Made with Jekyll, and HTML/CSS/Javascript.
+My personal webpage! Made with Jekyll, and HTML/CSS/Javascript.
