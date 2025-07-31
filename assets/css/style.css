@@ -6,8 +6,8 @@
   --med-blue: #64c4ed;
   --color-text: #2a2a2a;
   --light-gray: #e8f0f8;
-  --body-text: 16px;
-  --home-page-width: 75%;
+  --body-text: 15.5px;
+  --home-page-width: 70%;
   --nav-bar-width: 70px;
   --section-spacing: 2rem;
 }
@@ -27,8 +27,9 @@ html {
 body {
   margin: 0;
   /* font-family: 'Lato', sans-serif; */
-  font-family: 'Lora', serif;
-  /* font-family: 'Spectral', serif; */
+  /* font-family: 'EB Garamond', serif; */
+  font-family: 'Spectral', serif;
+  font-weight: 400;
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
@@ -44,12 +45,13 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 40px;
+  /* change to reduce space between nav bar and name */
   gap: 0;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding-bottom: 50px;
+  /* padding-bottom: 10px; */
 }
 
 /* Navigation */
@@ -85,7 +87,7 @@ body {
 
 .nav-button,
 .resume-button {
-  font-size: 17px;
+  font-size: calc(var(--body-text) + 2px);
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -134,7 +136,8 @@ body {
 /* Bouncing arrow */
 .arrow-container {
   position: absolute;
-  bottom: 75px;
+  bottom: 50px;
+  /* larger equals closer to bio text */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -214,10 +217,10 @@ body {
 }
 
 .name {
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.01em;
   font-style: bold;
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 0;
 }
 
@@ -230,7 +233,7 @@ body {
 
 .subtitle {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
   margin-bottom: 10px;
 }
@@ -295,12 +298,10 @@ body {
   white-space: nowrap;
   /* Keep date on one line */
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--body-text);
   color: #222;
   position: relative;
   background-color: transparent;
-  cursor: pointer;
-  /* width: 100px; */
 }
 
 .timeline-date::before {
@@ -308,7 +309,7 @@ body {
   position: absolute;
   top: 10%;
   left: 0;
-  height: 110%;
+  height: 90%;
   width: 100%;
   background-color: var(--light-blue);
   z-index: -1;
@@ -333,7 +334,7 @@ body {
 }
 
 .timeline-date:hover::before {
-  animation: highlight-swipe 0.6s ease;
+  animation: highlight-swipe 0.8s ease;
 }
 
 .timeline-description {
@@ -349,11 +350,13 @@ body {
 
 /* Project Cards */
 .project-cards {
+  margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 60px;
 }
 
 .project-card {
@@ -383,7 +386,7 @@ body {
 }
 
 .project-header h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
   color: var(--main-blue);
 }
@@ -411,7 +414,7 @@ body {
 
 .project-description p {
   margin: 0;
-  font-size: 16px;
+  font-size: var(--body-text);
   line-height: 1.5;
   color: var(--color-text);
   text-align: left;
@@ -481,7 +484,7 @@ body {
   background-color: var(--main-blue);
   color: white;
   text-align: center;
-  font-size: 14px;
+  font-size: calc(var(--body-text) - 2px);
   margin: 0;
   padding: 1px;
   box-sizing: border-box;
@@ -493,7 +496,7 @@ body {
 }
 
 .research-heading {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 1.2rem;
@@ -504,7 +507,7 @@ body {
 
 /* Publication Items */
 .research-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 50px;
   padding-left: 1rem;
   border-left: 2px solid #ddd;
 }
@@ -514,21 +517,26 @@ body {
 }
 
 .research-title {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: var(--body-text);
+  font-weight: 600;
   color: #333;
   margin: 0 0 0.3rem 0;
 }
 
 .research-authors {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #666;
   margin: 0 0 0.3rem 0;
 }
 
+.research-authors strong {
+  font-weight: 700;
+}
+
 .research-venue {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-style: italic;
+  font-weight: 500;
   color: #666;
   margin: 0 0 0.8rem 0;
 }
@@ -560,7 +568,7 @@ body {
   gap: 0.3rem;
   color: var(--main-blue);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
 }
 
@@ -568,18 +576,31 @@ body {
   opacity: 0.85;
 }
 
+.bibtex-block {
+  background-color: #f5f5f5;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-family: monospace;
+  white-space: pre-wrap;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+  display: block;
+}
+
 .status-badge {
   display: inline-block;
   padding: 0.25rem 0.6rem;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #fff8e1;
   color: #856404;
   border-radius: 4px;
   margin-top: 5px;
 }
 
-/* Research Experience Cards */
+/* Research Experience sections */
 .research-experience {
   background-color: white;
   padding-bottom: 0.75rem;
@@ -596,7 +617,7 @@ body {
 
 .experience-title {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #333;
   margin: 0;
 }
@@ -607,13 +628,13 @@ body {
 }
 
 .experience-lab {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--main-blue);
   margin: 0 0 0.8rem 0;
 }
 
 .experience-description {
-  font-size: 0.95rem;
+  font-size: var(--body-text);
   line-height: 1.5;
   color: #444;
   margin-bottom: 1rem;
@@ -636,8 +657,8 @@ body {
 }
 
 .res-proj-desc {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: var(--body-text);
+  color: #333;
   margin: 0;
 }
 
@@ -649,7 +670,7 @@ body {
 }
 
 .outcome-title {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--main-blue);
   margin: 0 0 0.3rem 0;
 }
@@ -666,7 +687,7 @@ body {
   gap: 0.4rem;
   color: var(--main-blue);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
   margin-right: 1rem;
   padding-bottom: 0.75rem;
@@ -702,7 +723,7 @@ body {
 
 .interest-area h4 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #333;
   margin: 0 0 0.5rem 0;
 }
