@@ -58,7 +58,8 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const externalLinks = document.querySelectorAll('.outside-link, .research-link, .icon-button');
+      const externalLinks = document.querySelectorAll('.link--external, .link--research, .link--icon, .github-link, .research-artifact');
+
       externalLinks.forEach(link => {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener noreferrer');
