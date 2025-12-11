@@ -280,13 +280,11 @@ body {
 .timeline__date::before {
   content: '';
   position: absolute;
-  top: 10%;
   left: 0;
   height: 90%;
   width: 100%;
   background-color: var(--light-blue);
   z-index: -1;
-  transform: rotate(-1.75deg);
   transition: none;
   pointer-events: none;
 }
