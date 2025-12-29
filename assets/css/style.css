@@ -64,18 +64,6 @@ body {
   padding: 15px 40px;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 22px;
-  color: var(--main-blue);
-  margin-right: 50px;
-}
-
-.logo a {
-  text-decoration: none;
-  color: var(--main-blue);
-}
-
 .nav-links {
   display: flex;
   justify-content: center;
@@ -469,8 +457,8 @@ body {
   color: white;
   text-align: center;
   font-size: calc(var(--body-text) - 2px);
-  margin-top: 1.5rem;
-  padding: 1px;
+  /* margin-top: 1rem; */
+  /* padding: 0.5px; */
   box-sizing: border-box;
 }
 
