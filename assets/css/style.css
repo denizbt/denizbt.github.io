@@ -221,18 +221,11 @@ body {
   position: relative;
   font-weight: 600;
   font-size: 2rem;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0.75rem 0;
   color: var(--color-text);
   display: inline-block;
 }
 
-.section-header::after {
-  content: '';
-  display: block;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin-top: 0.3rem;
-}
 
 /* Timeline Section */
 .timeline {
@@ -457,8 +450,7 @@ body {
   color: white;
   text-align: center;
   font-size: calc(var(--body-text) - 2px);
-  /* margin-top: 1rem; */
-  /* padding: 0.5px; */
+  padding: 0.25px;
   box-sizing: border-box;
 }
 
@@ -672,18 +664,75 @@ body {
   line-height: 1.4;
 }
 
-/* ===========================================
-   GALLERY SECTION
-   =========================================== */
-
-/* Gallery Container */
-.gallery-section {
-  width: var(--home-page-width);
-  margin: 0 auto;
-  padding: var(--section-spacing) 5% 0;
-  box-sizing: border-box;
+/* Books Section */
+.books-subtitle {
+  color: #666;
+  font-style: italic;
+  margin: 0 0 0.5rem 0;
 }
 
+.books-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.book-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.book-title {
+  /* font-size: 0.95rem; */
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+  color: #111;
+  display: inline;
+}
+
+.book-author {
+  /* font-size: 0.8rem; */
+  color: #999;
+  font-style: italic;
+  margin-bottom: 0.3rem;
+  display: inline;
+  margin-left: 0.3rem;
+}
+
+.book-author::before {
+  content: "— ";
+}
+
+.book-rating {
+  display: inline-flex;
+  gap: 0.2rem;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.star {
+  font-size: 0.75rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #fad039;
+}
+
+.book-review {
+  /* font-size: 0.85rem; */
+  color: #555;
+  line-height: 1.4;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+/* Gallery Container */
 .items-container {
   position: relative;
   margin: 2rem 0;
@@ -729,25 +778,6 @@ body {
 }
 
 /* Type Modifiers */
-.gallery-item--book {
-  display: flex;
-  flex-direction: column;
-}
-
-.gallery-item--book .gallery-image-container {
-  display: none;
-}
-
-.gallery-item--book .gallery-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 25px;
-  box-sizing: border-box;
-  height: 100%;
-}
-
 .gallery-item--image {
   background: none;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -878,50 +908,6 @@ body {
   flex-shrink: 0;
 }
 
-.reading-status {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  background: var(--light-blue);
-  color: var(--main-blue);
-  white-space: nowrap;
-}
-
-.status-reading {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.status-completed {
-  background: #d4edda;
-  color: #155724;
-}
-
-.status-wishlist {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.gallery-rating {
-  display: flex;
-  gap: 2px;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.star {
-  color: #ffd700;
-  font-size: 1rem;
-}
-
-.star.empty {
-  color: #ddd;
-}
-
-
-
 /* ===========================================
    RESPONSIVE DESIGN
    =========================================== */
@@ -940,15 +926,6 @@ body {
 
   .items-grid {
     columns: 1;
-  }
-
-  .gallery-item--book {
-    min-height: 160px !important;
-  }
-
-  .gallery-item--book .gallery-content {
-    min-height: 220px;
-    padding: 20px;
   }
 
   .gallery-item--image {
