@@ -1,8 +1,5 @@
 :root {
-  --font-serif: "Newsreader", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  /* Alternatives:
-     --font-serif: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  */
+  --font-serif: "Newsreader", "Palatino Linotype", Georgia, serif;
   --color-bg: #ffffff;
   --main-blue: #2c80b8;
   --light-blue: #b8e0fb;
@@ -46,7 +43,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 125px 0 48px;
+  padding: 140px 0 48px;
   gap: 1.75rem;
   width: 100%;
   max-width: 100%;
