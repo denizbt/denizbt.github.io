@@ -3,9 +3,8 @@ layout: default
 title: Home
 ---
 
-<div class="main-content" id="about">
+<div class="home-content" id="about">
   <div class="profile-info-container">
-    <!-- left side, prof pic -->
     <div class="profile-section">
       <img src="/assets/images/web-profile.jpeg" alt="Deniz Bölöni-Turgut" class="profile-pic" />
       <div class="social-icons">
@@ -17,7 +16,6 @@ title: Home
       </div>
     </div>
 
-    <!-- right side, bio -->
     <div class="info-section">
       <h1 class="name">Deniz Bölöni-Turgut</h1>
       <p class="pronunciation">
@@ -32,80 +30,53 @@ title: Home
       <p class="subtitle">researcher, software developer, book lover</p>
 
       <p class="bio">Hello! I am currently an undergraduate studying computer science at Cornell University. I am
-        applying for computer
-        science PhD programs (start Fall 2026), with an interest in machine learning
-        and natural language processing.</p>
+        applying for computer science PhD programs (start Fall 2026), with an interest in machine learning and natural
+        language processing.</p>
 
-      <p class="bio">At Cornell, I am lucky to be advised by Prof. Claire Cardie with whom I have worked on multiple NLP
-        research projects. I attended <a href="https://www.cmu.edu/scs/s3d/reuse/" class="link link--external">CMU
-          REUSE</a>
-        in Summer 2023 where I worked with Prof. Claire Le Goues on neural decompilation of malware with security
-        applications.</p>
+      <p class="bio">At Cornell, I have been fortunate to work with Prof. Claire Cardie on NLP research. I also spent
+        Summer 2023 at <a href="https://www.cmu.edu/scs/s3d/reuse/" class="link link--external">CMU REUSE</a>, where I
+        worked with Prof. Claire Le Goues on neural decompilation for malware analysis.</p>
 
-      <p class="bio">I have been a TA for Natural Language Processing (CS 4740) and
-        Mathematical Foundations of Computing (CS 2800). I was a Data Science lead for <a
-          href="https://cornelldata.science/" class="link link--external">Cornell Data Science</a> and Course Manager &
-        Lecturer for the
-        student-run
-        course <a href="https://cornelldatascience.github.io/info1998/" class="link link--external">INFO 1998</a> (Intro
-        to
-        Machine Learning). </p>
+      <p class="bio">I have served as a TA for Natural Language Processing (CS 4740) and Mathematical Foundations of
+        Computing (CS 2800), as Data Science Lead for <a href="https://cornelldata.science/"
+          class="link link--external">Cornell Data Science</a>, and as Course Manager and Lecturer for <a
+          href="https://cornelldatascience.github.io/info1998/" class="link link--external">INFO 1998</a>, an
+        introduction to machine learning.</p>
 
-      <p class="bio">Outside of CS, I am an avid bookworm, have a 700+ day streak on Duolingo (relearning Hungarian) and
-        enjoy caffeinated
-        beverages of every variety. Please feel free to reach out!</p>
-    </div>
-    <div class="arrow-container">
-      <div class="arrow-down" onclick="scrollWithNavbarOffset('updates')"></div>
+      <p class="bio">I am an avid bookworm, have a 850+ day streak on Duolingo (relearning Hungarian) and enjoy
+        caffeinated beverages of every variety. Please feel free to reach out!</p>
     </div>
   </div>
 
-  <!-- timeline section! -->
-  <div class="section-container" id="updates">
+  <section class="section-container updates-section" id="updates">
     <h2 class="section-header">Updates</h2>
-    <div class="timeline">
-      <!-- amazon internship -->
-      <div class="timeline__item">
-        <div class="timeline__header">
-          <span class="timeline__date">2025-06-02</span>
-          <p class="timeline__description">Started Software Development Engineer Internship at Amazon in NYC.</p>
-        </div>
-      </div>
-
-      <!-- paper acceptance -->
-      <div class="timeline__item">
-        <div class="timeline__header">
-          <span class="timeline__date">2025-04-22</span>
-          <p class="timeline__description">First paper accepted to DIMVA 2025! Using deep learning for decompilation
-            with
-            applications to malware.</p>
-        </div>
-      </div>
-
-      <!-- DS lead -->
-      <div class="timeline__item">
-        <div class="timeline__header">
-          <span class="timeline__date">2025-01-22</span>
-          <p class="timeline__description">Became the Data Science Subteam Lead for my project team, <a
-              href="https://cornelldata.science/" class="link link--external">Cornell Data Science</a>.</p>
-        </div>
-      </div>
-
-      <!-- CRA award -->
-      <div class="timeline__item">
-        <div class="timeline__header">
-          <span class="timeline__date">2024-12-18</span>
-          <p class="timeline__description">Received <a
-              href="https://cis.cornell.edu/cra-recognizes-19-outstanding-undergrad-researchers-cornell-bowers-cis"
-              class="link link--external">Honorable Mention</a> for 2025 CRA Outstanding Undergraduate Researcher Award.
-          </p>
-        </div>
-      </div>
+    <div class="updates-list">
+      <article class="update-row">
+        <p class="update-date">June 2025</p>
+        <p class="update-text">Started my Software Development Engineer internship at Amazon in New York City.</p>
+      </article>
+      <article class="update-row">
+        <p class="update-date">April 2025</p>
+        <p class="update-text">My first paper was accepted to DIMVA 2025 on machine-learning-based decompilation for
+          malware analysis.</p>
+      </article>
+      <article class="update-row">
+        <p class="update-date">January 2025</p>
+        <p class="update-text">Became Data Science Lead for <a href="https://cornelldata.science/"
+            class="link link--external">Cornell Data Science</a>.</p>
+      </article>
+      <article class="update-row">
+        <p class="update-date">December 2024</p>
+        <p class="update-text">Received an <a
+            href="https://cis.cornell.edu/cra-recognizes-19-outstanding-undergrad-researchers-cornell-bowers-cis"
+            class="link link--external">Honorable Mention</a> for the 2025 CRA Outstanding Undergraduate Researcher
+          Award.</p>
+      </article>
     </div>
-  </div>
+  </section>
 
   <!-- research section! -->
-  <div class="section-container" id="research">
+  <div class="section-container section-panel" id="research">
     <h2 class="section-header">Research</h2>
 
     <div class="research-section publications">
@@ -322,7 +293,7 @@ title: Home
 </div>
 
 <!-- project section! -->
-<div class="section-container" id="projects">
+<div class="section-container section-panel" id="projects">
   <h2 class="section-header">Software Projects</h2>
   <div class="research-experience">
     <div class="experience-header">
@@ -420,31 +391,6 @@ title: Home
   </div>
 </div>
 
-<script>
-  function scrollWithNavbarOffset(elementId) {
-    // Get the navbar height dynamically
-    const navbar = document.querySelector('.navbar');
-    const navbarHeight = navbar ? navbar.offsetHeight : 0;
-
-    // Get the target element
-    const targetElement = document.getElementById(elementId);
-
-    if (targetElement) {
-      // Calculate the element's position relative to the document
-      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-      // Add an offset buffer (adjust as needed)
-      const offset = 30;
-
-      // Scroll to the position with navbar height and buffer considered
-      window.scrollTo({
-        top: elementPosition - navbarHeight - offset,
-        behavior: 'smooth'
-      });
-    }
-  }
-</script>
-
 <!-- showing bibtex entry when clicked -->
 <script>
   function toggleContent(event, id) {
@@ -457,7 +403,7 @@ title: Home
 
 <!-- Add this to your index.html where you want the books section -->
 
-<section id="books" class="section-container">
+<section id="books" class="section-container section-panel">
   <h2 class="section-header">Reading</h2>
   <p class="books-subtitle">Selected recent reads & thoughts</p>
 
@@ -512,7 +458,7 @@ title: Home
 </section>
 
 <!-- Gallery Section -->
-<section class="section-container">
+<section class="section-container section-panel">
   <h2 class="section-header">Gallery</h2>
   <div class="items-container">
     <div class="items-grid items-grid">
@@ -521,7 +467,6 @@ title: Home
         <div class="gallery-image-container">
           <img src="assets/gallery/matcha-me.jpeg" alt="Deniz with Matcha" class="gallery-image">
           <div class="image-overlay">
-            <!-- <h3 class="overlay-title"></h3> -->
             <p class="overlay-subtitle">Matcha with friends!</p>
           </div>
         </div>

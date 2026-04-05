@@ -1,0 +1,99 @@
+:root {
+  --font-serif: "Newsreader", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  /* Alternatives:
+     --font-serif: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  */
+  --color-bg: #ffffff;
+  --main-blue: #2c80b8;
+  --light-blue: #b8e0fb;
+  --med-blue: #64c4ed;
+  --color-text: #0b0b0b;
+  --light-gray: #e8f0f8;
+  --surface-color: #ffffff;
+  --surface-line: rgba(42, 42, 42, 0.08);
+  --body-text: 16px;
+  --home-page-width: 70%;
+  --nav-bar-width: 70px;
+  --section-spacing: 1rem;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: var(--nav-bar-width);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 125px 0 48px;
+  gap: 1.75rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link--external {
+  text-decoration: underline;
+}
+
+.link--research {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--main-blue);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.link--icon {
+  font-size: 20px;
+  color: var(--main-blue);
+  margin-left: 10px;
+}
+
+.site-footer {
+  width: 100%;
+  background-color: var(--main-blue);
+  color: white;
+  text-align: center;
+  font-size: calc(var(--body-text) - 2px);
+  padding: 0.25px;
+  box-sizing: border-box;
+}

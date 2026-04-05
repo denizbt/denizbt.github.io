@@ -27,13 +27,14 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 0;
   }
 
   .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 0;
   }
 
   .info-section {
@@ -41,6 +42,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .subtitle,
+  .bio {
+    max-width: 100%;
   }
 
   .project-cards {
@@ -85,13 +91,14 @@
   .profile-info-container {
     display: block;
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   .profile-section {
-    margin: 30px auto;
+    margin: 0 auto 30px;
     width: 100%;
-    max-width: 180px;
+    max-width: 220px;
+    padding-top: 0;
   }
 
   .info-section {
@@ -100,8 +107,8 @@
   }
 
   .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 210px;
+    height: 260px;
   }
 
   .name {
@@ -122,16 +129,6 @@
 
   .section-container h2 {
     font-size: 1.75rem;
-  }
-
-  .timeline-header {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .timeline-date {
-    min-width: auto;
-    width: fit-content;
   }
 
   .research-experience-card {
@@ -173,17 +170,17 @@
   }
 
   .main-content {
-    padding-top: 90px;
+    padding-top: 120px;
   }
 
   .profile-info-container {
     min-height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 175px;
+    height: 220px;
   }
 
   .name {
@@ -209,12 +206,14 @@
     padding: var(--section-spacing) 4% 0;
   }
 
-  .interests-grid {
-    grid-template-columns: 1fr;
+  .section-panel {
+    padding-top: 1.8rem;
+    padding-bottom: 2rem;
+    border-radius: 26px;
   }
 
-  .arrow-container {
-    bottom: 50px;
+  .interests-grid {
+    grid-template-columns: 1fr;
   }
 
   .social-icons {
@@ -247,8 +246,8 @@
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 145px;
+    height: 185px;
   }
 
   .name {
