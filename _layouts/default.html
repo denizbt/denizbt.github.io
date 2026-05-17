@@ -28,11 +28,11 @@
   <div class="page-wrapper">
     <nav class="navbar">
       <div class="nav-links">
-        <a href="/#about" class="nav-button">About</a>
-        <a href="/#research" class="nav-button">Research</a>
-        <a href="/#projects" class="nav-button">Projects</a>
-        <a href="/assets/files/denizbt_CV.pdf" target="_blank" rel="noopener noreferrer" class="
-          resume-button">CV/Resumé</a>
+        <a href="/" class="nav-button {% if page.nav_section == 'about' %}nav-active{% endif %}">About</a>
+        <a href="/research/" class="nav-button {% if page.nav_section == 'research' %}nav-active{% endif %}">Research</a>
+        <a href="/projects/" class="nav-button {% if page.nav_section == 'projects' %}nav-active{% endif %}">Projects</a>
+        <a href="/reading/" class="nav-button {% if page.nav_section == 'reading' %}nav-active{% endif %}">Reading</a>
+        <a href="/assets/files/denizbt_CV.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">CV/Resumé</a>
       </div>
     </nav>
 

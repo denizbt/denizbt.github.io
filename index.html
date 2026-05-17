@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title: About
+nav_section: about
 ---
 
 <div class="home-content" id="about">
@@ -75,446 +76,63 @@ title: Home
     </div>
   </section>
 
-  <!-- research section! -->
-  <div class="section-container section-panel" id="research">
-    <h2 class="section-header">Research</h2>
-
-    <div class="research-section publications">
-      <h3 class="research-subsection-header">Publications</h3>
-
-      <div class="research-item published">
-        <p class="research-title">
-          Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement
-        </p>
-        <p class="research-authors">
-          Dramko L., <strong>Bölöni-Turgut D.</strong>, Le Goues C., Schwartz E.
-        </p>
-        <p class="research-venue">
-          In Proceedings of Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA), 2025
-        </p>
-        <div class="skill-tags">
-          <span class="skill-tag">Deep Learning</span>
-          <span class="skill-tag">Malware Analysis</span>
-          <span class="skill-tag">Security</span>
-        </div>
-        <div class="research-links">
-          <a href="https://doi.org/10.1007/978-3-031-97620-9_14" class="link link--research">
-            <i class="fa-solid fa-link"></i>
-            <span>DOI</span>
-          </a>
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=i2lV6xQAAAAJ&citation_for_view=i2lV6xQAAAAJ:u5HHmVD_uO8C"
-            class="link link--research">
-            <i class="fa-solid fa-file"></i> Paper
-          </a>
-          <a href="https://github.com/squaresLab/ML-Decompilation-Obfuscation" class="link link--research">
-            <i class="fa-brands fa-github"></i>
-            <span>Code</span>
-          </a>
-          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex1')">
-            <i class="fas fa-code"></i> BibTeX
-          </a>
+  <section class="section-container section-panel" id="gallery">
+    <div class="items-container">
+      <div class="items-grid">
+        <div class="gallery-item gallery-item--image gallery-item--large">
+          <div class="gallery-image-container">
+            <img src="assets/gallery/matcha-me.jpeg" alt="Deniz with Matcha" class="gallery-image">
+            <div class="image-overlay">
+              <p class="overlay-subtitle">Matcha with friends!</p>
+            </div>
+          </div>
         </div>
 
-        <pre class="bibtex-block" id="bibtex1" style="display: none;">
-@inproceedings{dramko2025dimva,
-  author    = {Luke Dramko and Deniz Bölöni-Turgut and Claire Le Goues and Edward Schwartz},
-  title     = {Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement},
-  booktitle = {Proceedings of the IEEE Conference on Detection of Intrusions, Malware, and Vulnerability Assessment},
-  year      = {2025}
-}
-    </pre>
-      </div>
+        <div class="gallery-item gallery-item--image gallery-item--small">
+          <div class="gallery-image-container">
+            <img src="assets/gallery/central-park-view.jpeg" alt="Central Park" class="gallery-image">
+            <div class="image-overlay">
+              <p class="overlay-subtitle">Central Park in July. View from Belvedere Castle.</p>
+            </div>
+          </div>
+        </div>
 
-      <div class="research-item published">
-        <p class="research-title">
-          Team cornell-1 at PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis
-        </p>
-        <p class="research-authors">
-          <strong>Bölöni-Turgut D.</strong>, Verma D., Cardie C.
-        </p>
-        <p class="research-venue">
-          In Working Notes of CLEF 2025 - Conference and Labs of the Evaluation Forum, CEUR-WS.org
-        </p>
-        <div class="skill-tags">
-          <span class="skill-tag">Natural Language Processing</span>
-          <span class="skill-tag">Machine Learning</span>
-          <span class="skill-tag">Style Analysis</span>
+        <div class="gallery-item gallery-item--image gallery-item--small">
+          <div class="gallery-image-container">
+            <img src="assets/gallery/budapest.jpeg" alt="Budapest" class="gallery-image">
+            <div class="image-overlay">
+              <p class="overlay-subtitle">View of Pest, from Buda (with mom).</p>
+            </div>
+          </div>
         </div>
-        <div class="research-links">
-          <a href="https://ceur-ws.org/Vol-4038/paper_286.pdf" class="link link--research" target="_blank">
-            <i class="fa-solid fa-file"></i> Paper
-          </a>
-          <a href="https://github.com/denizbt/pan-styleAnalysis25" class="link link--research">
-            <i class="fa-brands fa-github"></i>
-            <span>Code</span>
-          </a>
-          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex2')">
-            <i class="fas fa-code"></i> BibTeX
-          </a>
+
+        <div class="gallery-item gallery-item--image gallery-item--medium">
+          <div class="gallery-image-container">
+            <img src="assets/gallery/cornell-blossom.jpeg" alt="Cherry Blossoms" class="gallery-image">
+            <div class="image-overlay">
+              <p class="overlay-subtitle">Spring by Sage Hall, Cornell University.</p>
+            </div>
+          </div>
         </div>
-        <pre class="bibtex-block" id="bibtex2" style="display: none;">
-@inproceedings{boloniturgut-pan25,
-  author    = {Deniz Boloni-Turgut, Dhriti Verma, Claire Cardie},
-  title     = {Team cornell-1 at PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis},
-  booktitle = {Experimental IR Meets Multilinguality, Multimodality, and Interaction. Proceedings of the Sixteenth International Conference of the CLEF Association (CLEF 2025)},
-  year      = {2025}
-}
-    </pre>
+
+        <div class="gallery-item gallery-item--image gallery-item--small">
+          <div class="gallery-image-container">
+            <img src="assets/gallery/vangogh_moma.jpeg" alt="Van Gogh painting" class="gallery-image">
+            <div class="image-overlay">
+              <p class="overlay-subtitle">Olive Trees, Vincent Van Gogh @ MOMA.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--image gallery-item--large">
+          <div class="gallery-image-container">
+            <img src="assets/gallery/cornell_winter.jpeg" alt="Cornell in Winter" class="gallery-image">
+            <div class="image-overlay">
+              <p class="overlay-subtitle">The clock tower in winter, Cornell University.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="research-section experience">
-      <h3 class="research-subsection-header">Experience</h3>
-
-      <div class="research-experience">
-        <div class="experience-header">
-          <h4 class="experience-title">Undergraduate Researcher</h4>
-          <span class="experience-date">Jan 2024 - Present</span>
-        </div>
-        <p class="experience-lab">Cornell University NLP Group, Advisor: Dr. Claire Cardie</p>
-        <!-- <p class="experience-description">Contributed to multiple NLP research projects.</p> -->
-
-        <div class="project-skills">
-          <img src="/assets/images/python-logo-only.svg">
-          <img src="/assets/images/pytorch-icon.svg">
-          <span class="hugging-face-emoji">🤗</span>
-          <i class="fa-brands fa-docker skill-icon"></i>
-        </div>
-
-        <div class="research-proj-list">
-          <div class="res-proj-item">
-            <p class="res-proj-name">Multi-Author Sentence Pair Style Analysis <a
-                href="https://pan.webis.de/clef25/pan25-web/style-change-detection.html"
-                class="link link--external">(PAN
-                2025
-                Shared Task)</a></p>
-            <p class="res-proj-desc">Design and train an ensemble model from multiple fine-tuned transformer models for
-              multi-author writing style analysis. Given pairs of sentences, identify whether the sentences were written
-              by the same author or different authors (binary classification). Submit system and first author paper to
-              PAN Labs 2025
-              shared task, achieving average macro F1 score of 0.8.</p>
-            <a href="https://ceur-ws.org/Vol-4038/paper_286.pdf" class="research-artifact" target="_blank">
-              <i class="fa-solid fa-file"></i>
-              <span>Paper</span></a>
-            <a href="https://github.com/denizbt/pan-styleAnalysis25" class="research-artifact" target="_blank">
-              <i class="fa-brands fa-github"></i>
-              <span>Code</span></a>
-          </div>
-
-          <div class="res-proj-item">
-            <p class="res-proj-name">commit0</p>
-            <p class="res-proj-desc">Research LLM coding agents ability to implement Python packages given only textual
-              specifications and a unit test suite, i.e. starting from commit0 of a GitHub repository.</p>
-            <a href="/research/commit0/" class="research-artifact">
-              <i class="fa-brands fa-readme"></i>
-              <span>README</span></a>
-            <a href="https://github.com/MaxWhitton25/multi-agent-repo-completion" class="research-artifact"
-              target="_blank">
-              <i class="fa-brands fa-github"></i>
-              <span>Code</span></a>
-          </div>
-          <div class="res-proj-item">
-            <p class="res-proj-name">Open Ended Question Evaluation</p>
-            <p class="res-proj-desc"> Evaluated length bias and self bias in open-ended
-              essay responses by GPT and Llama3 LLMs. Utilized prompt engineering techniques to generate concise and
-              verbose responses, while controlling and measuring semantic overlap. Work acknowledged in <a
-                href="https://arxiv.org/pdf/2412.04363" class="link link--external">NAACL 2025 Findings paper.</a></p>
-            <a href="/assets/files/bure_poster_session.pdf" class="research-artifact" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fa-solid fa-file"></i>
-              <span>Research Poster</span></a>
-          </div>
-          <div class="res-proj-item">
-            <p class="res-proj-name">BioLaySumm <a href="https://biolaysumm.org/" class="link link--external">(ACL 2024
-                Shared
-                Task)</a></p>
-            <p class="res-proj-desc">Finetuned T5 and BART for 91.7% increase in ROUGE score for lay summarization of
-              biomedical articles with HuggingFace transformers. Improved readability scores by 31% with prompt
-              engineering and OpenAI GPT API.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="research-experience">
-        <div class="experience-header">
-          <h4 class="experience-title">Research Assistant</h4>
-          <span class="experience-date">May 2023 - May 2024</span>
-        </div>
-        <p class="experience-lab">Carnegie Mellon University, <a href="https://www.cmu.edu/scs/s3d/reuse/"
-            class="link link--external">REU in Software Engineering</a>, Advisor: Dr.
-          Claire Le Goues</p>
-        <p class="experience-description">Developed neural approaches to decompilation (converting machine code back
-          into source code) of C programs with applications in malware analysis. Compiled a 800GB+ novel dataset of
-          obfuscated binary code, starting from open-source C-language repositories. Designed the data pipeline to
-          automate GitHub scraping, obfuscation, and compilation with g++ and clang. Repurposed and refactored a
-          large-scale Python codebase.</p>
-        <div class="project-skills">
-          <img src="/assets/images/python-logo-only.svg">
-          <img src="/assets/images/pytorch-icon.svg">
-          <i class="skill-icon fa-solid fa-shield"></i>
-          <span class="skill-tag">C/C++</span>
-          <span class="skill-tag">Obfuscation</span>
-        </div>
-        <div class="outcome-highlight">
-          <p class="outcome-title">Outcome</p>
-          <p class="outcome-desc">Published paper in Detection of
-            Intrusions and Malware & Vulnerability Assessment (DIMVA) 2025</p>
-        </div>
-
-        <a href="/assets/files/cmu_reuse_poster.pdf" class="research-artifact" target="_blank"
-          rel="noopener noreferrer">
-          <i class="fa-solid fa-file"></i>
-          <span>Research Poster</span>
-        </a>
-        <a href="/research/cmu-reuse/" class="research-artifact">
-          <i class="fa-brands fa-readme"></i>
-          <span>README</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- <div class="research-section interests">
-      <h3 class="research-subsection-header">Research Interests</h3>
-      <div class="grid grid--interests">
-        <div class="card card--interest">
-          <i class="fa-solid fa-paragraph"></i>
-          <h4>Natural Language Processing</h4>
-          <p>Researching and evaluating the capabilities of LLMs.</p>
-        </div>
-        <div class="card card--interest">
-          <i class="fa-solid fa-shield"></i>
-          <h4>Security Applications of ML</h4>
-          <p>Using machine learning in malware analysis.</p>
-        </div>
-      </div> -->
-  </div>
+  </section>
 </div>
-
-<!-- project section! -->
-<div class="section-container section-panel" id="projects">
-  <h2 class="section-header">Software Projects</h2>
-  <div class="research-experience">
-    <div class="experience-header">
-      <h4 class="experience-title">Software Development Engineer Intern</h4>
-      <span class="experience-date">Jun 2025 - Aug 2025</span>
-    </div>
-    <p class="experience-lab">Amazon.com, <a href="https://www.amazon.com/live" class="link link--external">Amazon
-        Live</a></p>
-    <p class="experience-description">Designed and implemented an AI-powered automated content moderation system for
-      Amazon Live
-      broadcasts. Owned system from design to testing. Collaborated with software engineers and product managers.</p>
-    <div class="project-skills">
-      <img src="/assets/images/python-logo-only.svg">
-      <i class="skill-icon fa-brands fa-aws"></i>
-      <span class="skill-tag">Databases</span>
-      <span class="skill-tag">Backend Development</span>
-      <span class="skill-tag">AWS Cloud Development Kit</span>
-      <span class="skill-tag">Java</span>
-    </div>
-  </div>
-
-  <div class="grid grid--projects">
-    <!-- MathSearch Project Card -->
-    <div class="card card--project">
-      <div class="project-header">
-        <h3>
-          <a href="/projects/mathsearch/" class="link">MathSearch <i class="fa-brands fa-readme"
-              style="margin-left: 7px;"></i></a>
-        </h3>
-        <a href="https://github.com/CornellDataScience/MathSearch" target="_blank" class="github-link">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-
-      <div class="project-description">
-        <p>A next generation search engine for researchers that supports searching for equations inside PDFs with
-          LaTeX.</p>
-      </div>
-
-      <div class="project-footer">
-        <div class="project-skills">
-          <img src="/assets/images/python-logo-only.svg">
-          <i class="fab fa-aws skill-icon"></i>
-          <i class="fa-brands fa-docker skill-icon"></i>
-        </div>
-      </div>
-    </div>
-    <!-- OScrabble Project Card -->
-    <div class="card card--project">
-      <div class="project-header">
-        <h3>OScrabble</h3>
-        <a href="https://github.com/denizbt/ocaml-scrabble" target="_blank" class="github-link">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-
-      <div class="project-description">
-        <p>A command-line implementation of Scrabble coded entirely in the functional programming language OCaml.
-        </p>
-      </div>
-      <div class="project-footer">
-        <div class="project-skills">
-          <a href="https://ocaml.org" class="link link--external">
-            <img src="/assets/images/ocaml-icon.svg" alt="OCaml Logo">
-          </a>
-          <span class="skill-tag">Scrum</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- LoRA projects -->
-    <div class="card card--project">
-      <div class="project-header">
-        <h3>LoRA Implementation</h3>
-        <a href="https://github.com/denizbt/LoRA-cs4782" target="_blank" class="github-link">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-
-      <div class="project-description">
-        <p>Implementation of Low Rank Adaptation from scratch for RoBERTa and DeBERTa models. Fine-tuned models and
-          compared performance to <a href="https://arxiv.org/abs/2106.09685" class="link link--external">original
-            paper.</a>
-        </p>
-      </div>
-
-      <div class="project-footer">
-        <div class="project-skills">
-          <img src="/assets/images/python-logo-only.svg">
-          <img src="/assets/images/pytorch-icon.svg">
-          <span class="hugging-face-emoji">🤗</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- showing bibtex entry when clicked -->
-<script>
-  function toggleContent(event, id) {
-    event.preventDefault();
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.style.display = (el.style.display === "none" || el.style.display === "") ? "block" : "none";
-  }
-</script>
-
-<!-- Add this to your index.html where you want the books section -->
-
-<section id="books" class="section-container section-panel">
-  <h2 class="section-header">Reading</h2>
-  <p class="books-subtitle">Selected recent reads & thoughts</p>
-
-  <ul class="books-list">
-    <li class="book-item">
-      <div class="book-title">Emma</div>
-      <div class="book-author">by Jane Austen</div>
-      <div class="book-rating">
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star">★</span>
-      </div>
-      <p class="book-review">I will admit to struggling with Emma as a character till the very end; her behavior towards
-        Harriet would be unforgivable if it hadn't turned out okay in the end (with no credit to Emma). I did enjoy the
-        complete and vivid depiction of Highbury society. In my eyes, P&P
-        and S&S are more romantic and boast characters who are much easier to sympathize with, if less fleshed out.
-      </p>
-    </li>
-
-    <li class="book-item">
-      <div class="book-title">The Well of Ascension</div>
-      <div class="book-author">by Brandon Sanderson</div>
-      <div class="book-rating">
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star">★</span>
-      </div>
-      <p class="book-review">As a continuation to Mistborn, it succeeds very well. I love the cast of characters, and
-        can forgive the somewhat clumsy pacing and heavy handed character development
-        (especially as it regards Vin, Zane, and Elend).</p>
-    </li>
-
-    <li class="book-item">
-      <div class="book-title">Four Thousand Weeks: Time Management for Mortals</div>
-      <div class="book-author">by Oliver Burkeman</div>
-      <div class="book-rating">
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star filled">★</span>
-        <span class="star">★</span>
-        <span class="star">★</span>
-      </div>
-      <p class="book-review">A reality check for overachievers. Insightful, but it didn't change my life.
-        Maybe it'll change yours?</p>
-    </li>
-  </ul>
-  </div>
-</section>
-
-<!-- Gallery Section -->
-<section class="section-container section-panel">
-  <h2 class="section-header">Gallery</h2>
-  <div class="items-container">
-    <div class="items-grid items-grid">
-      <!-- picture of me! -->
-      <div class="gallery-item gallery-item--image gallery-item--large">
-        <div class="gallery-image-container">
-          <img src="assets/gallery/matcha-me.jpeg" alt="Deniz with Matcha" class="gallery-image">
-          <div class="image-overlay">
-            <p class="overlay-subtitle">Matcha with friends!</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image-Only Card -->
-      <div class="gallery-item gallery-item--image gallery-item--small">
-        <div class="gallery-image-container">
-          <img src="assets/gallery/central-park-view.jpeg" alt="Central Park" class="gallery-image">
-          <div class="image-overlay">
-            <p class="overlay-subtitle">Central Park in July. View from Belvedere Castle.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item gallery-item--image gallery-item--small">
-        <div class="gallery-image-container">
-          <img src="assets/gallery/budapest.jpeg" alt="Central Park" class="gallery-image">
-          <div class="image-overlay">
-            <p class="overlay-subtitle">View of Pest, from Buda (with mom).</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item gallery-item--image gallery-item--medium">
-        <div class="gallery-image-container">
-          <img src="assets/gallery/cornell-blossom.jpeg" alt="Cherry Blossoms" class="gallery-image">
-          <div class="image-overlay">
-            <p class="overlay-subtitle">Spring by Sage Hall, Cornell University.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item gallery-item--image gallery-item--small">
-        <div class="gallery-image-container">
-          <img src="assets/gallery/vangogh_moma.jpeg" alt="Van Gogh painting" class="gallery-image">
-          <div class="image-overlay">
-            <p class="overlay-subtitle">Olive Trees, Vincent Van Gogh @ MOMA.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item gallery-item--image gallery-item--large">
-        <div class="gallery-image-container">
-          <img src="assets/gallery/cornell_winter.jpeg" alt="Cornell in Winter" class="gallery-image">
-          <div class="image-overlay">
-            <p class="overlay-subtitle">The clock tower in winter, Cornell University.</p>
-          </div>
-        </div>
-      </div>
-</section>

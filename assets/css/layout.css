@@ -19,7 +19,7 @@
 .nav-links {
   display: flex;
   justify-content: center;
-  gap: 64px;
+  gap: 40px;
   flex-grow: 1;
   align-items: center;
   margin: 0 auto;
@@ -64,6 +64,17 @@
 .resume-button:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.nav-button.nav-active {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.nav-button.nav-active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  background-color: var(--main-blue);
 }
 
 .profile-info-container {
