@@ -9,7 +9,13 @@ nav_section: about
     <div class="profile-section">
       <img src="/assets/images/web-profile.jpeg" alt="Deniz Bölöni-Turgut" class="profile-pic" />
       <div class="social-icons">
-        <a href="mailto:db823@cornell.edu" class="link link--icon"><i class="fas fa-envelope"></i></a>
+        <button class="link link--icon email-copy-btn"
+          onclick="navigator.clipboard.writeText('denizbt@umd.edu').then(() => { const t = this.querySelector('.copy-toast'); t.classList.add('visible'); setTimeout(() => t.classList.remove('visible'), 1500); })"
+          title="Copy email address" aria-label="Copy email address">
+          <i class="fas fa-envelope"></i>
+          <span class="email-tooltip">denizbt@umd.edu</span>
+          <span class="copy-toast">Copied!</span>
+        </button>
         <a href="https://linkedin.com/in/deniz-bt" class="link link--icon"><i class="fab fa-linkedin fa-m"></i></a>
         <a href="https://github.com/denizbt" class="link link--icon"><i class="fab fa-github fa-m"></i></a>
         <a href="https://scholar.google.com/citations?user=i2lV6xQAAAAJ" class="link link--icon"><i
@@ -29,9 +35,11 @@ nav_section: about
 
       <p class="subtitle">researcher, software developer, book lover</p>
 
-      <p class="bio">Hello! I am currently an undergraduate studying computer science at Cornell University. I am
-        applying for computer science PhD programs (start Fall 2026), with an interest in machine learning and natural
-        language processing.</p>
+      <p class="bio">Hello! I am
+        an incoming CS PhD student at the <a href="https://www.cs.umd.edu/" class="link link--external">University of
+          Maryland</a>
+        (start Fall 2026), with a research focus in natural
+        language processing. I recently graduated from Cornell University with a B.S. in Computer Science.</p>
 
       <p class="bio">At Cornell, I was fortunate to work with Prof. Claire Cardie on NLP research. I was a TA for
         Natural Language Processing (CS 4740) and Mathematical Foundations of
@@ -55,6 +63,13 @@ nav_section: about
         <p class="update-text">I am a recipient of the 2026 <a
             href="https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program"
             class="link link--external">NSF GRFP</a>!</p>
+      </article>
+      <article class="update-row">
+        <p class="update-date">03/2026</p>
+        <p class="update-text">I was named a <a
+            href="https://scl.cornell.edu/growth-opportunities/awards-funding/merrill-presidential-scholars-program"
+            class="link link--external">Merrill Presidential Scholar</a>, given to the top 1% of Cornell's graduating
+          class.</p>
       </article>
       <article class="update-row">
         <p class="update-date">06/2025</p>
