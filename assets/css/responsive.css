@@ -5,24 +5,6 @@
     --section-spacing: 1.5rem;
   }
 
-  .navbar {
-    padding: 12px 20px;
-  }
-
-  .logo {
-    margin-right: 30px;
-    font-size: 20px;
-  }
-
-  .nav-links {
-    gap: 30px;
-  }
-
-  .nav-button,
-  .resume-button {
-    font-size: 16px;
-  }
-
   .profile-info-container {
     flex-direction: column;
     align-items: center;
@@ -59,32 +41,65 @@
   }
 }
 
-/* Small Screens (tablets & large phones) */
+/* Sidebar collapses to top bar at tablet/mobile */
 @media screen and (max-width: 768px) {
   :root {
     --home-page-width: 95%;
+    --sidebar-width: 0px;
   }
 
-  .navbar {
-    padding: 10px 15px;
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 1.25rem;
+    border-right: none;
+    border-bottom: 1px solid var(--surface-line);
+    gap: 1rem;
+    background: var(--main-blue);
   }
 
-  .logo {
-    margin-right: 15px;
-    font-size: 18px;
+  .sidebar-name {
+    font-size: 0.95rem;
+    white-space: nowrap;
   }
 
-  .nav-links {
-    gap: 20px;
+  .sidebar-nav {
+    flex-direction: row;
+    flex: none;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
-  .nav-button,
-  .resume-button {
-    font-size: 15px;
+  .sidebar-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
   }
 
-  .resume-button {
-    margin-right: 0;
+  .sidebar-link.nav-active {
+    border-left: none;
+    border-bottom-color: var(--main-blue);
+  }
+
+  .sidebar-icons {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 70px;
+  }
+
+  .site-footer {
+    margin-left: 0;
+    width: 100%;
   }
 
   /* Restructured profile section for mobile */
@@ -131,10 +146,6 @@
     font-size: 1.75rem;
   }
 
-  .research-experience-card {
-    padding: 1.2rem;
-  }
-
   .experience-header {
     flex-direction: column;
     gap: 5px;
@@ -147,30 +158,21 @@
 
 /* Mobile Phones */
 @media screen and (max-width: 576px) {
-  .navbar {
-    flex-direction: column;
-    padding: 8px 10px;
-    gap: 10px;
+  .sidebar-name {
+    font-size: 0.85rem;
   }
 
-  .logo {
-    margin-right: 0;
-    text-align: center;
+  .sidebar-link {
+    font-size: 0.82rem;
+    padding: 0.25rem 0.4rem;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .nav-button,
-  .resume-button {
-    font-size: 14px;
+  .sidebar-cv {
+    display: none;
   }
 
   .main-content {
-    padding-top: 120px;
+    padding-top: 65px;
   }
 
   .profile-info-container {
@@ -209,7 +211,6 @@
   .section-panel {
     padding-top: 1.8rem;
     padding-bottom: 2rem;
-    border-radius: 26px;
   }
 
   .interests-grid {
@@ -232,17 +233,9 @@
 
 /* Very Small Phones */
 @media screen and (max-width: 400px) {
-  .navbar {
-    padding: 8px 5px;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .nav-button,
-  .resume-button {
-    font-size: 13px;
+  .sidebar-link {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.35rem;
   }
 
   .profile-pic {

@@ -9,8 +9,9 @@
   --surface-color: #ffffff;
   --surface-line: rgba(42, 42, 42, 0.08);
   --body-text: 16px;
-  --home-page-width: 70%;
-  --nav-bar-width: 70px;
+  --home-page-width: 88%;
+  --sidebar-width: 280px;
+  --nav-bar-width: 1.5rem;
   --section-spacing: 1rem;
 }
 
@@ -43,10 +44,10 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 140px 0 48px;
+  padding: 4rem 0 48px;
   gap: 1.75rem;
-  width: 100%;
-  max-width: 100%;
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
   box-sizing: border-box;
 }
 
@@ -86,11 +87,16 @@ body {
 }
 
 .site-footer {
-  width: 100%;
-  background-color: var(--main-blue);
-  color: white;
+  width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  background-color: transparent;
+  color: var(--color-text);
   text-align: center;
   font-size: calc(var(--body-text) - 2px);
-  padding: 0.25px;
+  padding: 1.25rem 0;
   box-sizing: border-box;
+}
+
+.footer-content p {
+  margin: 0;
 }

@@ -23,6 +23,41 @@
   display: inline-block;
 }
 
+.page-hero {
+  width: var(--home-page-width);
+  margin: 0 auto;
+  padding: 0 5% 1.5rem;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.6rem;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 3px;
+  background: var(--main-blue);
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6b7c8a;
+  margin: 0.65rem 0 0 0;
+}
+
 .updates-section {
   padding-top: 0.5rem;
 }
@@ -30,13 +65,18 @@
 .updates-list {
   display: flex;
   flex-direction: column;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-blue) transparent;
 }
 
 .update-row {
   position: relative;
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 0.75rem;
   padding: 0.65rem 0;
   align-items: start;
 }
@@ -63,7 +103,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 120px;
+  width: 90px;
   height: 2px;
   background: linear-gradient(90deg, var(--light-blue), transparent);
 }

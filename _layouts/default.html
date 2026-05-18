@@ -26,15 +26,19 @@
 
 <body>
   <div class="page-wrapper">
-    <nav class="navbar">
-      <div class="nav-links">
-        <a href="/" class="nav-button {% if page.nav_section == 'about' %}nav-active{% endif %}">About</a>
-        <a href="/research/" class="nav-button {% if page.nav_section == 'research' %}nav-active{% endif %}">Research</a>
-        <a href="/projects/" class="nav-button {% if page.nav_section == 'projects' %}nav-active{% endif %}">Projects</a>
-        <a href="/reading/" class="nav-button {% if page.nav_section == 'reading' %}nav-active{% endif %}">Reading</a>
-        <a href="/assets/files/denizbt_CV.pdf" target="_blank" rel="noopener noreferrer" class="resume-button">CV/Resumé</a>
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a href="/" class="sidebar-name">Deniz Bölöni-Turgut</a>
+        <p class="sidebar-whimsy">⋆.˚⋆𓇼｡𖦹˙༄.°</p>
       </div>
-    </nav>
+      <nav class="sidebar-nav">
+        <a href="/" class="sidebar-link {% if page.nav_section == 'about' %}nav-active{% endif %}">About</a>
+        <a href="/research/" class="sidebar-link {% if page.nav_section == 'research' %}nav-active{% endif %}">Research</a>
+        <a href="/projects/" class="sidebar-link {% if page.nav_section == 'projects' %}nav-active{% endif %}">Projects</a>
+        <a href="/miscellany/" class="sidebar-link {% if page.nav_section == 'miscellany' %}nav-active{% endif %}">Miscellany</a>
+        <a href="/assets/files/denizbt_CV.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link sidebar-cv">CV/Resumé</a>
+      </nav>
+    </aside>
 
     <main class="main-content">
       {{ content }}
