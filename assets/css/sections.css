@@ -9,7 +9,7 @@
   background-color: transparent;
   border: 0;
   border-radius: 0;
-  padding-top: 1.25rem;
+  padding-top: 0.5rem;
   padding-bottom: 1.5rem;
   box-shadow: none;
 }
@@ -26,7 +26,7 @@
 .page-hero {
   width: var(--home-page-width);
   margin: 0 auto;
-  padding: 0 5% 1.5rem;
+  padding: 0 5% 0.5rem;
   box-sizing: border-box;
 }
 
@@ -36,7 +36,7 @@
   margin: 0;
   display: inline-block;
   position: relative;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.1rem;
   line-height: 1.1;
   color: var(--color-text);
 }
@@ -56,6 +56,28 @@
   font-style: italic;
   color: #6b7c8a;
   margin: 0.65rem 0 0 0;
+}
+
+.fun-fact {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--color-text);
+}
+
+.fun-fact li {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.fun-fact li::before {
+  content: "༄";
+  position: absolute;
+  left: 0;
+  color: var(--main-blue);
 }
 
 .updates-section {
@@ -446,10 +468,12 @@
   line-height: 1.4;
 }
 
-.books-subtitle {
-  color: #666;
+.misc-subtitle {
+  font-size: 1.35rem;
   font-style: italic;
-  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
 }
 
 .books-list {
