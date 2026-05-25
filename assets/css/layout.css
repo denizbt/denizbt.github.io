@@ -81,7 +81,7 @@
   align-items: flex-start;
   gap: 64px;
   width: var(--home-page-width);
-  margin: 0 auto;
+  margin: 20px auto 0;
   padding: 0 5% 1rem;
   box-sizing: border-box;
   position: relative;

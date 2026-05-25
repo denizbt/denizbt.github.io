@@ -84,6 +84,10 @@
   padding-top: 0.5rem;
 }
 
+#gallery {
+  margin-top: 2rem;
+}
+
 .updates-list {
   display: flex;
   flex-direction: column;
