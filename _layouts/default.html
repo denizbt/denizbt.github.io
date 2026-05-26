@@ -31,12 +31,24 @@
         <a href="/" class="sidebar-name">Deniz Bölöni-Turgut</a>
         <p class="sidebar-whimsy">⋆.˚⋆𓇼｡𖦹˙༄.°</p>
       </div>
-      <nav class="sidebar-nav">
+
+      <!-- Mobile only: hamburger toggle -->
+      <div class="sidebar-mobile-controls">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebar-nav">
         <a href="/" class="sidebar-link {% if page.nav_section == 'about' %}nav-active{% endif %}">About</a>
-        <a href="/research/" class="sidebar-link {% if page.nav_section == 'research' %}nav-active{% endif %}">Research</a>
-        <a href="/projects/" class="sidebar-link {% if page.nav_section == 'projects' %}nav-active{% endif %}">Projects</a>
-        <a href="/miscellany/" class="sidebar-link {% if page.nav_section == 'miscellany' %}nav-active{% endif %}">Miscellany</a>
-        <a href="/assets/files/denizbt_CV.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link sidebar-cv">CV/Resumé</a>
+        <a href="/research/"
+          class="sidebar-link {% if page.nav_section == 'research' %}nav-active{% endif %}">Research</a>
+        <a href="/projects/"
+          class="sidebar-link {% if page.nav_section == 'projects' %}nav-active{% endif %}">Projects</a>
+        <a href="/miscellany/"
+          class="sidebar-link {% if page.nav_section == 'miscellany' %}nav-active{% endif %}">Miscellany</a>
+        <a href="/assets/files/denizbt_CV.pdf" target="_blank" rel="noopener noreferrer"
+          class="sidebar-link sidebar-cv"><b style="color: white">CV/Resumé</b></a>
       </nav>
     </aside>
 
@@ -54,11 +66,20 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const externalLinks = document.querySelectorAll('.link--external, .link--research, .link--icon, .github-link');
-
       externalLinks.forEach(link => {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener noreferrer');
       });
+
+      const hamburger = document.getElementById('hamburger-btn');
+      const nav = document.getElementById('sidebar-nav');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function () {
+          const isOpen = nav.classList.toggle('open');
+          this.setAttribute('aria-expanded', isOpen);
+          this.querySelector('i').className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+        });
+      }
     });
   </script>
 </body>
