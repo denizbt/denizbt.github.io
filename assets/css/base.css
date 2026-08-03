@@ -1,18 +1,19 @@
 :root {
-  --font-serif: "Newsreader", "Palatino Linotype", Georgia, serif;
+  --font: "Lato", "Open Sans", sans-serif;
+  --font-serif: "Lora", serif;
   --color-bg: #ffffff;
   --main-blue: #2c80b8;
   --light-blue: #b8e0fb;
-  --med-blue: #64c4ed;
   --color-text: #0b0b0b;
-  --light-gray: #e8f0f8;
   --surface-color: #ffffff;
-  --surface-line: rgba(42, 42, 42, 0.08);
-  --body-text: 16px;
-  --home-page-width: 88%;
-  --sidebar-width: 280px;
-  --nav-bar-width: 1.5rem;
-  --section-spacing: 1rem;
+  --body-text: 14.5px;
+  --sidebar-text-size: calc(var(--body-text) + 1pt);
+  --home-page-width: 75%;
+  --sidebar-gap: 220px;
+  --nav-bar-width: 1rem;
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
 }
 
 html {
@@ -27,8 +28,8 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font);
+  font-weight: var(--fw-regular);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
@@ -44,23 +45,23 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 4rem 0 48px;
-  gap: 1.75rem;
-  margin-left: var(--sidebar-width);
-  width: calc(100% - var(--sidebar-width));
+  padding: 5.5rem 0 5rem;
+  gap: 3rem;
+  margin-left: var(--sidebar-gap);
+  width: calc(100% - var(--sidebar-gap));
   box-sizing: border-box;
 }
 
 .home-content {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .link {
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .link:hover {
@@ -77,7 +78,7 @@ body {
   gap: 0.3rem;
   color: var(--main-blue);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: var(--body-text);
 }
 
 .link--icon {
@@ -102,7 +103,7 @@ body {
   background: var(--color-text);
   color: #fff;
   font-size: 11px;
-  font-family: var(--font-serif);
+  font-family: var(--font);
   padding: 3px 8px;
   border-radius: 4px;
   white-space: nowrap;
@@ -123,7 +124,7 @@ body {
   background: var(--color-text);
   color: #fff;
   font-size: 11px;
-  font-family: var(--font-serif);
+  font-family: var(--font);
   padding: 3px 8px;
   border-radius: 4px;
   white-space: nowrap;
@@ -137,8 +138,8 @@ body {
 }
 
 .site-footer {
-  width: calc(100% - var(--sidebar-width));
-  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-gap));
+  margin-left: var(--sidebar-gap);
   background-color: transparent;
   color: var(--color-text);
   text-align: center;

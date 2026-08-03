@@ -2,7 +2,6 @@
 @media screen and (max-width: 992px) {
   :root {
     --home-page-width: 90%;
-    --section-spacing: 1.5rem;
   }
 
   .profile-info-container {
@@ -13,16 +12,11 @@
   }
 
   .profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 0;
   }
 
   .info-section {
     text-align: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -31,21 +25,12 @@
     max-width: 100%;
   }
 
-  .project-cards {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-  }
-
-  .interests-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
 }
 
 /* Sidebar collapses to top bar at tablet/mobile */
 @media screen and (max-width: 768px) {
   :root {
     --home-page-width: 95%;
-    --sidebar-width: 0px;
   }
 
   .sidebar {
@@ -54,16 +39,21 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    text-align: left;
     justify-content: space-between;
     padding: 0.75rem 1.25rem;
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(44, 128, 184, 0.1);
     gap: 0;
-    background: var(--main-blue);
+    background: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+  }
+
+  .sidebar.is-scrolled {
+    box-shadow: 0 8px 24px rgba(31, 82, 117, 0.1);
   }
 
   .sidebar-top {
@@ -75,11 +65,6 @@
     font-size: 0.8rem;
   }
 
-  .sidebar-name {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
   /* Mobile controls: hamburger only */
   .sidebar-mobile-controls {
     display: flex;
@@ -89,7 +74,7 @@
   .hamburger-btn {
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--main-blue);
     font-size: 1.25rem;
     cursor: pointer;
     padding: 0.25rem 0.4rem;
@@ -100,17 +85,18 @@
   .sidebar-nav {
     display: none;
     flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(44, 128, 184, 0.55);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     padding: 0.5rem 1.25rem 0.75rem;
     gap: 0;
     z-index: 999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 24px rgba(31, 82, 117, 0.1);
   }
 
   .sidebar-nav.open {
@@ -118,20 +104,12 @@
   }
 
   .sidebar-link {
-    font-size: 0.95rem;
     padding: 0.35rem 0.5rem;
-    border-left: 2px solid transparent;
-    border-bottom: none;
-    border-radius: 4px;
+    width: fit-content;
   }
 
   .sidebar-link.nav-active {
-    border-left-color: #ffffff;
-    border-bottom: none;
-  }
-
-  .sidebar-icons {
-    display: none;
+    color: var(--main-blue);
   }
 
   .main-content {
@@ -177,7 +155,6 @@
   .pronunciation,
   .subtitle {
     font-size: 18px;
-    margin-top: 0;
   }
 
   .bio {
@@ -194,24 +171,12 @@
     gap: 5px;
   }
 
-  .project-cards {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Mobile Phones */
 @media screen and (max-width: 576px) {
-  .sidebar-name {
-    font-size: 0.85rem;
-  }
-
   .sidebar-link {
-    font-size: 0.82rem;
     padding: 0.25rem 0.4rem;
-  }
-
-  .sidebar-cv {
-    display: block;
   }
 
   .main-content {
@@ -236,7 +201,6 @@
   .pronunciation,
   .subtitle {
     font-size: 16px;
-    margin-top: 0;
   }
 
   .bio {
@@ -248,7 +212,7 @@
   }
 
   .section-container {
-    padding: var(--section-spacing) 4% 0;
+    padding: 1.5rem 4% 0;
   }
 
   .section-panel {
@@ -256,8 +220,9 @@
     padding-bottom: 2rem;
   }
 
-  .interests-grid {
-    grid-template-columns: 1fr;
+  .section-panel.miscellany-panel,
+  .section-panel.research-panel {
+    padding-top: 0;
   }
 
   .social-icons {
@@ -265,19 +230,11 @@
     justify-content: center;
   }
 
-  .project-card {
-    padding: 15px;
-  }
-
-  .project-header h3 {
-    font-size: 18px;
-  }
 }
 
 /* Very Small Phones */
 @media screen and (max-width: 400px) {
   .sidebar-link {
-    font-size: 0.78rem;
     padding: 0.2rem 0.35rem;
   }
 

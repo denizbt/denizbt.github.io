@@ -1,25 +1,37 @@
 .sidebar {
+  font-family: var(--font-serif);
+  font-size: var(--sidebar-text-size);
+  font-weight: var(--fw-medium);
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;
+  width: 320px;
   height: 100vh;
-  padding: 5rem 1.5rem 2.5rem 3rem;
-  border-right: none;
-  background: var(--main-blue);
+  padding: 5.5rem 1.5rem 2.5rem;
+  background: #ffffff;
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.75rem;
   box-sizing: border-box;
-  align-items: flex-start;
-  text-align: left;
+  align-items: flex-end;
+  text-align: right;
+  transition: box-shadow 0.25s ease;
+}
+
+.sidebar.is-scrolled {
+  box-shadow: 10px 0 30px rgba(31, 82, 117, 0.09);
+}
+
+.sidebar-name,
+.sidebar-link {
+  font-family: var(--font-serif);
+  font-size: var(--sidebar-text-size);
+  font-weight: var(--fw-medium);
 }
 
 .sidebar-name {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
   line-height: 1.35;
   display: block;
@@ -28,34 +40,41 @@
   transition: opacity 0.2s ease;
 }
 
-.sidebar-name:hover {
-  opacity: 0.75;
-}
-
 .sidebar-whimsy {
   margin: 0.3rem 0 0 0;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--main-blue);
   letter-spacing: 0.05em;
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  align-items: flex-end;
+  gap: 0.45rem;
   flex: 1;
 }
 
 .sidebar-link {
-  font-size: var(--body-text);
-  font-weight: 500;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.82);
-  padding: 0.45rem 0.75rem;
-  border-radius: 6px;
-  border-left: 2px solid transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  display: block;
+  color: var(--color-text);
+  padding: 0.45rem 0 0.35rem;
+  position: relative;
+  transition: color 0.2s ease;
+  display: inline-block;
+  width: fit-content;
+}
+
+.sidebar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-blue);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.22s ease;
 }
 
 .sidebar-mobile-controls {
@@ -63,30 +82,28 @@
 }
 
 .sidebar-link:hover {
-  background-color: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
+  color: var(--main-blue);
+}
+
+.sidebar-link:hover::after,
+.sidebar-link.nav-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .sidebar-link.nav-active {
-  color: #ffffff;
-  font-weight: 700;
-  border-left-color: #ffffff;
-}
-
-.sidebar-cv {
-  color: rgba(255, 255, 255, 0.82);
-  font-weight: 600;
-  margin-top: 0.5rem;
+  color: var(--main-blue);
+  font-weight: var(--fw-medium);
 }
 
 .profile-info-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 64px;
+  gap: 80px;
   width: var(--home-page-width);
-  margin: 20px auto 0;
-  padding: 0 5% 1rem;
+  margin: 0 auto;
+  padding: 0 5%;
   box-sizing: border-box;
   position: relative;
 }
@@ -112,9 +129,14 @@
 
 .social-icons {
   display: flex;
-  gap: 25px;
-  justify-content: left;
+  gap: 30px;
+  justify-content: center;
   width: 100%;
+  flex-wrap: nowrap;
+}
+
+.social-icons .link--icon {
+  margin-left: 0;
 }
 
 .info-section {
@@ -123,45 +145,44 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
 }
 
 .name {
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.01em;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
   line-height: 1.1;
   display: inline-block;
   position: relative;
-  padding-bottom: 0.6rem;
-}
-
-.name::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 52px;
-  height: 3px;
-  background: var(--main-blue);
+  padding-bottom: 0.1rem;
 }
 
 .pronunciation {
-  margin: 0;
-  font-size: 1.05rem;
+  font-family: var(--font-serif);
+  margin: 0.15rem 0 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.pronunciation .link--icon {
+  margin-left: 0.35rem;
+  font-size: 0.85rem;
 }
 
 .subtitle {
-  margin: 0;
-  font-size: 1.2rem;
+  font-family: var(--font-serif);
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
   font-style: italic;
   color: #4e6170;
   max-width: 42rem;
 }
 
 .bio {
-  margin: 0;
+  margin: 0.65rem 0 0;
   font-size: var(--body-text);
   max-width: 46rem;
   color: var(--color-text);
