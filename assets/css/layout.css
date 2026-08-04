@@ -1,7 +1,6 @@
 .sidebar {
   font-family: var(--font-serif);
   font-size: var(--sidebar-text-size);
-  font-weight: var(--fw-medium);
   position: fixed;
   top: 0;
   left: 0;
@@ -27,11 +26,12 @@
 .sidebar-link {
   font-family: var(--font-serif);
   font-size: var(--sidebar-text-size);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
 }
 
 .sidebar-name {
   color: var(--color-text);
+  font-weight: var(--fw-medium);
   font-style: italic;
   text-decoration: none;
   line-height: 1.35;
@@ -152,9 +152,10 @@
 
 .name {
   font-family: var(--font-serif);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
   letter-spacing: 0.01em;
   font-size: 3rem;
+  /* font-size: 2.5rem; */
   margin: 0;
   line-height: 1.1;
   display: inline-block;
@@ -163,7 +164,7 @@
 }
 
 .pronunciation {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   margin: 0.15rem 0 0;
   font-size: 1rem;
   font-style: italic;
@@ -176,7 +177,7 @@
 
 /* the thing that used to say "researcher, software developer, book lover" */
 .subtitle {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   margin: 0.5rem 0 0;
   font-size: 1rem;
   font-style: italic;

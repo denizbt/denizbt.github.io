@@ -14,9 +14,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
+
+  <!-- Lato -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
+
+  <!-- Roboto Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
 
 
   <!-- Stylesheets -->
@@ -37,7 +44,7 @@
         <!-- <p class="sidebar-whimsy">⋆.˚⋆𓇼｡𖦹˙༄.°</p> -->
       </div>
 
-      <!-- Mobile only: hamburger toggle -->
+      <!-- Mobile only: hamburger menu -->
       <div class="sidebar-mobile-controls">
         <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
           <i class="fas fa-bars"></i>
@@ -76,13 +83,6 @@
       const hamburger = document.getElementById('hamburger-btn');
       const nav = document.getElementById('sidebar-nav');
       const sidebar = document.querySelector('.sidebar');
-
-      const updateSidebarShadow = () => {
-        sidebar?.classList.toggle('is-scrolled', window.scrollY > 8);
-      };
-      updateSidebarShadow();
-      window.addEventListener('scroll', updateSidebarShadow, { passive: true });
-
       if (hamburger && nav) {
         hamburger.addEventListener('click', function () {
           const isOpen = nav.classList.toggle('open');

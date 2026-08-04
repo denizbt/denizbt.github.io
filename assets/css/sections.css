@@ -14,7 +14,8 @@
 .section-header {
   font-family: var(--font-serif);
   position: relative;
-  font-weight: var(--fw-medium);
+  /* font-weight: var(--fw-medium); */
+  font-weight: var(--fw-regular);
   font-size: 2rem;
   margin: 0 0 1.75rem 0;
   color: var(--color-text);
@@ -32,7 +33,8 @@
 .page-title {
   font-family: var(--font-serif);
   font-size: 3rem;
-  font-weight: var(--fw-medium);
+  /* font-weight: var(--fw-medium); */
+  font-weight: var(--fw-regular);
   margin: 0;
   display: inline-block;
   position: relative;
@@ -40,14 +42,6 @@
   line-height: 1.1;
   color: var(--color-text);
 }
-
-/* .page-subtitle {
-  font-family: var(--font-serif);
-  font-size: var(--body-text);
-  font-style: italic;
-  color: #6b7c8a;
-  margin: 0.65rem 0 0 0;
-} */
 
 .fun-fact {
   list-style: none;
@@ -358,7 +352,7 @@
 
 .book-title {
   font-family: var(--font-serif);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-medium);
   margin-bottom: 0.1rem;
   color: #111;
   display: inline;

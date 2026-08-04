@@ -1,6 +1,6 @@
 :root {
-  --font: "Lato", "Open Sans", sans-serif;
-  --font-serif: "Lora", serif;
+  --font: "Open Sans", "Lato", sans-serif;
+  --font-serif: "Lora", "Roboto Mono", serif;
   --color-bg: #ffffff;
   --main-blue: #2c80b8;
   --light-blue: #b8e0fb;
