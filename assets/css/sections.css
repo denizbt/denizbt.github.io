@@ -41,13 +41,13 @@
   color: var(--color-text);
 }
 
-.page-subtitle {
+/* .page-subtitle {
   font-family: var(--font-serif);
   font-size: var(--body-text);
   font-style: italic;
   color: #6b7c8a;
   margin: 0.65rem 0 0 0;
-}
+} */
 
 .fun-fact {
   list-style: none;
@@ -333,15 +333,6 @@
 .research-artifact:hover {
   opacity: 0.85;
 }
-
-/* .misc-subtitle {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-style: italic;
-  font-weight: var(--fw-medium);
-  color: var(--color-text);
-  margin: 0 0 1rem 0;
-} */
 
 .miscellany-panel,
 .research-panel {

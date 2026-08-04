@@ -32,6 +32,7 @@
 
 .sidebar-name {
   color: var(--color-text);
+  font-style: italic;
   text-decoration: none;
   line-height: 1.35;
   display: block;
@@ -40,6 +41,7 @@
   transition: opacity 0.2s ease;
 }
 
+/* a line underneath my name on the sidebar */
 .sidebar-whimsy {
   margin: 0.3rem 0 0 0;
   color: var(--main-blue);
@@ -172,6 +174,7 @@
   font-size: 0.85rem;
 }
 
+/* the thing that used to say "researcher, software developer, book lover" */
 .subtitle {
   font-family: var(--font-serif);
   margin: 0.5rem 0 0;
