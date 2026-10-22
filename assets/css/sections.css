@@ -118,6 +118,7 @@
 
 .project-skills {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
@@ -153,6 +154,7 @@
 }
 
 .research-item {
+  overflow-wrap: anywhere;
   margin-bottom: 32px;
   padding: 1.2rem 1.35rem;
   border: 1px solid rgba(42, 42, 42, 0.08);
@@ -208,10 +210,17 @@
 
 .research-links {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.research-links a {
+  white-space: nowrap;
 }
 
 .bibtex-block {
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
   background-color: #f7f9fb;
   padding: 0.75rem 1rem;
   font-size: var(--body-text);

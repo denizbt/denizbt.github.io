@@ -1,5 +1,5 @@
 /* Medium Screens (tablets & smaller laptops) */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   :root {
     --home-page-width: 90%;
   }
@@ -16,8 +16,8 @@
   }
 
   .info-section {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .subtitle,
@@ -28,9 +28,17 @@
 }
 
 /* Sidebar collapses to top bar at tablet/mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   :root {
-    --home-page-width: 95%;
+    --home-page-width: 100%;
+    --body-text: 16px;
+  }
+
+  .profile-info-container,
+  .section-container,
+  .page-hero {
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
   }
 
   .sidebar {
@@ -83,6 +91,7 @@
 
   /* Nav drops below the bar, overlaying page content */
   .sidebar-nav {
+    box-sizing: border-box;
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -115,7 +124,7 @@
   .main-content {
     margin-left: 0;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 6rem;
   }
 
   .site-footer {
@@ -159,7 +168,7 @@
 
   .bio {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .section-container h2 {
@@ -177,10 +186,6 @@
 @media screen and (max-width: 576px) {
   .sidebar-link {
     padding: 0.25rem 0.4rem;
-  }
-
-  .main-content {
-    padding-top: 65px;
   }
 
   .profile-info-container {
@@ -203,16 +208,21 @@
     font-size: 16px;
   }
 
-  .bio {
-    font-size: 15px;
-  }
-
   .section-container h2 {
     font-size: 1.5rem;
   }
 
   .section-container {
-    padding: 1.5rem 4% 0;
+    padding-top: 1.5rem;
+  }
+
+  .research-item {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .page-title {
+    font-size: 2.25rem;
   }
 
   .section-panel {
@@ -252,7 +262,4 @@
     font-size: 15px;
   }
 
-  .bio {
-    font-size: 14px;
-  }
 }
