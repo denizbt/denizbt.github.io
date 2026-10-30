@@ -1,18 +1,20 @@
 /* Medium Screens (tablets & smaller laptops) */
 @media screen and (max-width: 1200px) {
   :root {
-    --home-page-width: 90%;
+    --column-gap: 3.5rem;
   }
 
   .profile-info-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 2rem;
     padding-bottom: 0;
   }
 
   .profile-section {
     padding-top: 0;
+  }
+
+  .name {
+    font-size: clamp(2rem, 3.6vw, 2.65rem);
   }
 
   .info-section {
@@ -29,6 +31,12 @@
 
 /* Sidebar collapses to top bar at tablet/mobile */
 @media screen and (max-width: 992px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   :root {
     --home-page-width: 100%;
     --body-text: 16px;
@@ -51,11 +59,11 @@
     justify-content: space-between;
     padding: 0.75rem 1.25rem;
     border-right: none;
-    border-bottom: 1px solid rgba(44, 128, 184, 0.1);
+    border-bottom: 1px solid var(--color-rule);
     gap: 0;
-    background: #ffffff;
+    background: var(--color-bg);
     position: fixed;
-    top: 0;
+    top: var(--page-top-offset);
     left: 0;
     z-index: 1000;
   }
@@ -66,11 +74,6 @@
 
   .sidebar-top {
     flex: 1;
-  }
-
-  .sidebar-whimsy {
-    margin: 0.1rem 0 0 0;
-    font-size: 0.8rem;
   }
 
   /* Mobile controls: hamburger only */
@@ -99,7 +102,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.96);
+    background: var(--color-bg);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     padding: 0.5rem 1.25rem 0.75rem;
@@ -214,11 +217,6 @@
 
   .section-container {
     padding-top: 1.5rem;
-  }
-
-  .research-item {
-    padding: 1rem;
-    border-radius: 16px;
   }
 
   .page-title {

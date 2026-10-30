@@ -1,16 +1,21 @@
 :root {
   --font: "Open Sans", "Lato", sans-serif;
   --font-serif: "Lora", "Roboto Mono", serif;
-  --color-bg: #ffffff;
-  --main-blue: #2c80b8;
-  --light-blue: #b8e0fb;
+  --color-bg: #fcfaf6;
+  --main-blue: #286c94;
+  --light-blue: #c5dce5;
   --color-text: #0b0b0b;
-  --surface-color: #ffffff;
+  --surface-color: #f0eadf;
+  --color-rule: #ddd7ca;
+  --color-warm-ink: #805d49;
   --body-text: 14.5px;
   --sidebar-text-size: calc(var(--body-text) + 1pt);
-  --home-page-width: 75%;
-  --sidebar-gap: 260px;
+  --home-page-width: 100%;
+  --site-width: 1184px;
+  --sidebar-width: 220px;
+  --column-gap: 5.5rem;
   --nav-bar-width: 1rem;
+  --page-top-offset: 30px;
   --fw-regular: 400;
   --fw-medium: 600;
   --fw-bold: 700;
@@ -28,6 +33,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: var(--page-top-offset);
   font-family: var(--font);
   font-weight: var(--fw-regular);
   background-color: var(--color-bg);
@@ -35,10 +41,24 @@ body {
   line-height: 1.6;
 }
 
+::selection {
+  background: var(--light-blue);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--main-blue);
+  outline-offset: 4px;
+}
+
 .page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: calc(100vh - var(--page-top-offset));
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: var(--column-gap);
+  width: min(calc(100% - 4rem), var(--site-width));
+  margin: 0 auto;
 }
 
 .main-content {
@@ -46,10 +66,11 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 5.5rem 0 5rem;
+  padding: 4rem 0 4rem;
   gap: 3rem;
-  margin-left: var(--sidebar-gap);
-  width: calc(100% - var(--sidebar-gap));
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -139,8 +160,9 @@ body {
 }
 
 .site-footer {
-  width: calc(100% - var(--sidebar-gap));
-  margin-left: var(--sidebar-gap);
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
   background-color: transparent;
   color: var(--color-text);
   text-align: center;
@@ -151,4 +173,11 @@ body {
 
 .footer-content p {
   margin: 0;
+}
+
+.footer-content .sea-ornament {
+  margin-bottom: 0.65rem;
+  color: var(--main-blue);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
 }

@@ -7,7 +7,13 @@ nav_section: about
 <div class="home-content" id="about">
   <div class="profile-info-container">
     <div class="profile-section">
-      <img src="/assets/images/web-profile.jpeg" alt="Deniz Bölöni-Turgut" class="profile-pic" />
+      <picture>
+        <source type="image/webp"
+          srcset="/assets/images/web-profile-480.webp 480w, /assets/images/web-profile-720.webp 720w"
+          sizes="(max-width: 400px) 145px, (max-width: 576px) 175px, (max-width: 992px) 210px, 212px">
+        <img src="/assets/images/web-profile-480.jpg" alt="Deniz Bölöni-Turgut" class="profile-pic" width="212"
+          height="260" fetchpriority="high" loading="eager" decoding="async" />
+      </picture>
       <div class="social-icons">
         <button class="link link--icon email-copy-btn"
           onclick="navigator.clipboard.writeText('denizbt@umd.edu').then(() => { const t = this.querySelector('.copy-toast'); t.classList.add('visible'); setTimeout(() => t.classList.remove('visible'), 1500); })"
@@ -21,16 +27,16 @@ nav_section: about
         <a href="https://scholar.google.com/citations?user=i2lV6xQAAAAJ" class="link link--icon"
           aria-label="Deniz Bölöni-Turgut on Google Scholar" title="Google Scholar"><i
             class="fa-brands fa-google-scholar"></i></a>
-        <!-- <a href="https://x.com/_denizbt" class="link link--icon" title="Twitter/X"><i
-            class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://bsky.app/profile/deniz-bt.bsky.social" class="link link--icon" title="Bluesky"><i
+        <a href="https://x.com/denizbtbt" class="link link--icon" title="Twitter/X"
+          aria-label="Deniz Bölöni-Turgut on X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <!-- <a href="https://bsky.app/profile/deniz-bt.bsky.social" class="link link--icon" title="Bluesky"><i
             class="fa-brands fa-bluesky"></i></a> -->
       </div>
     </div>
 
     <div class="info-section">
       <h1 class="name">Deniz Bölöni-Turgut</h1>
-      <p class="pronunciation">DEH-niz BEU-leu-nee TOOR-goot
+      <p class="pronunciation">deh-niz beu-leu-nee toor-goot
         <a href="#" class="link link--icon" onclick="document.getElementById('name-audio').play(); return false;"
           aria-label="Play pronunciation">
           <i class="fas fa-volume-up"></i>
@@ -38,11 +44,11 @@ nav_section: about
         <audio id="name-audio" src="assets/files/name-audio.m4a"></audio>
       </p>
       <p class="bio">Hello! I am
-        a first-year CS PhD student at the <a href="https://www.cs.umd.edu/" class="link link--external">University of
-          Maryland</a> with a research focus in natural
+        a first-year CS PhD student at the University of
+        Maryland, College Park with a research focus in natural
         language processing. I am advised by Prof. Mohit Iyyer and Prof. Hal Daumé III. My work is supported by the <a
           href="https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program/nsf25-547/solicitation"
-          class="link link--external">NSF GRFP</a>. Before UMD, I received my B.S. in Computer
+          class="link link--external">NSF GRFP</a>. I received my B.S. in Computer
         Science from Cornell University.</p>
 
       <p class="bio">At Cornell, I was fortunate to work with Prof. Claire Cardie and Prof. Tanya Goyal. I was a TA for

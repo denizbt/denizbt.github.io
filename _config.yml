@@ -1,6 +1,8 @@
 title: denizbt
 description: Deniz BT's personal portfolio webpage!
 url: "https://denizbt.github.io/"
+# Keep GitHub Pages' default theme from replacing the site's custom CSS.
+theme: null
 markdown: kramdown
 kramdown:
   math_engine: mathjax

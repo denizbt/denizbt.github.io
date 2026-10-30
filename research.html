@@ -3,10 +3,21 @@ layout: default
 title: Research
 nav_section: research
 permalink: /research/
+# Add image paths and descriptive alt text here to fill the figure slots.
+figures:
+  idealens:
+    src: "/assets/images/idealens_fig.png"
+    alt: ""
+  decompilation:
+    src: "/assets/images/decomp_fig.png"
+    alt: "Process of decompiling a program with deterministic decompiler like Hex-Rays."
+  pan:
+    src: "/assets/images/pan_fig.png"
+    alt: ""
 ---
 
 <div class="page-hero">
-  <h2 class="page-title">Research</h2>
+  <h2 class="page-title">Research <span class="page-tide" aria-hidden="true">༄</span></h2>
 </div>
 
 <div class="section-container section-panel research-panel">
@@ -14,37 +25,40 @@ permalink: /research/
     <h3 class="research-subsection-header">Preprints</h3>
 
     <div class="research-item preprint">
-      <p class="research-title">
-        IdeaLens: Detecting AI Ideas in Long-form Writing
-      </p>
-      <p class="research-authors">
-        Rishanth Rajendhran &middot; Minjoon Choi &middot; Jenna Russell &middot; Ramya Namuduri &middot;
-        <strong>Deniz Bölöni-Turgut</strong> &middot; Marzena Karpinska &middot; John Wieting &middot; Mohit Iyyer
-      </p>
-      <p class="research-venue">
-        arXiv preprint arXiv:2610.06778, 2026
-      </p>
-      <div class="skill-tags">
-        <span class="skill-tag">Natural Language Processing</span>
-        <span class="skill-tag">AI Text Detection</span>
-      </div>
-      <div class="research-links">
-        <a href="https://arxiv.org/pdf/2610.06778" class="link link--research">
-          <i class="fa-solid fa-file"></i> arXiv
-        </a>
-        <a href="https://github.com/RishanthRajendhran/IdeaLens" class="link link--research">
-          <i class="fa-brands fa-github"></i>
-          <span>Code</span>
-        </a>
-        <a href="https://ideadetector.ai/" class="link link--research">
-          <i class="fa-solid fa-link"></i>
-          <span>Demo</span>
-        </a>
-        <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex-idealens')">
-          <i class="fas fa-code"></i> BibTeX
-        </a>
-      </div>
-      <pre class="bibtex-block" id="bibtex-idealens" style="display: none;">
+      {% include research-figure.html src=page.figures.idealens.src alt=page.figures.idealens.alt %}
+      <div class="research-details">
+        <h4 class="research-title">
+          <a href="https://arxiv.org/pdf/2610.06778" target="_blank" rel="noopener noreferrer">IdeaLens: Detecting AI
+            Ideas in Long-form Writing</a>
+        </h4>
+        <p class="research-authors">
+          Rishanth Rajendhran, Minjoon Choi, Jenna Russell, Ramya Namuduri,
+          <u>Deniz Bölöni-Turgut</u>, Marzena Karpinska, John Wieting, Mohit Iyyer
+        </p>
+        <p class="research-venue">
+          arXiv preprint arXiv:2610.06778, 2026
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">Natural Language Processing</span>
+          <span class="skill-tag">AI Text Detection</span>
+        </div>
+        <div class="research-links">
+          <a href="https://arxiv.org/pdf/2610.06778" class="link link--research">
+            <i class="fa-solid fa-file"></i> arXiv
+          </a>
+          <a href="https://github.com/RishanthRajendhran/IdeaLens" class="link link--research">
+            <i class="fa-brands fa-github"></i>
+            <span>Code</span>
+          </a>
+          <a href="https://ideadetector.ai/" class="link link--research">
+            <i class="fa-solid fa-link"></i>
+            <span>Demo</span>
+          </a>
+          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex-idealens')">
+            <i class="fas fa-code"></i> BibTeX
+          </a>
+        </div>
+        <pre class="bibtex-block" id="bibtex-idealens" style="display: none;">
 @misc{rajendhran2026idealens,
   author        = {Rishanth Rajendhran and Minjoon Choi and Jenna Russell and Ramya Namuduri and Deniz Bölöni-Turgut and Marzena Karpinska and John Wieting and Mohit Iyyer},
   title         = "{IdeaLens}: Detecting {AI} Ideas in Long-form Writing",
@@ -55,6 +69,7 @@ permalink: /research/
   url           = {https://arxiv.org/abs/2610.06778}
 }
       </pre>
+      </div>
     </div>
   </div>
 
@@ -62,37 +77,41 @@ permalink: /research/
     <h3 class="research-subsection-header">Publications</h3>
 
     <div class="research-item published">
-      <p class="research-title">
-        Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement
-      </p>
-      <p class="research-authors">
-        Luke Dramko &middot; <strong>Deniz Bölöni-Turgut</strong> &middot; Claire Le Goues &middot; Edward Schwartz
-      </p>
-      <p class="research-venue">
-        In Proceedings of Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA), 2025
-      </p>
-      <div class="skill-tags">
-        <span class="skill-tag">Decompilation</span>
-        <span class="skill-tag">Malware</span>
-        <span class="skill-tag">Software Engineering</span>
-      </div>
-      <div class="research-links">
-        <a href="https://doi.org/10.1007/978-3-031-97620-9_14" class="link link--research">
-          <i class="fa-solid fa-link"></i>
-          <span>DOI</span>
-        </a>
-        <a href="https://squareslab.github.io/materials/dramko2025dimva.pdf" class="link link--research">
-          <i class="fa-solid fa-file"></i> Paper
-        </a>
-        <a href="https://github.com/squaresLab/ML-Decompilation-Obfuscation" class="link link--research">
-          <i class="fa-brands fa-github"></i>
-          <span>Code</span>
-        </a>
-        <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex1')">
-          <i class="fas fa-code"></i> BibTeX
-        </a>
-      </div>
-      <pre class="bibtex-block" id="bibtex1" style="display: none;">
+      {% include research-figure.html src=page.figures.decompilation.src alt=page.figures.decompilation.alt %}
+      <div class="research-details">
+        <h4 class="research-title">
+          <a href="https://squareslab.github.io/materials/dramko2025dimva.pdf" target="_blank"
+            rel="noopener noreferrer">Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based
+            Decompilation Improvement</a>
+        </h4>
+        <p class="research-authors">
+          Luke Dramko, <u>Deniz Bölöni-Turgut</u>, Claire Le Goues, Edward Schwartz
+        </p>
+        <p class="research-venue">
+          In Proceedings of Detection of Intrusions and Malware, and Vulnerability Assessment (DIMVA), 2025
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">Decompilation</span>
+          <span class="skill-tag">Malware</span>
+          <span class="skill-tag">Software Engineering</span>
+        </div>
+        <div class="research-links">
+          <a href="https://doi.org/10.1007/978-3-031-97620-9_14" class="link link--research">
+            <i class="fa-solid fa-link"></i>
+            <span>DOI</span>
+          </a>
+          <a href="https://squareslab.github.io/materials/dramko2025dimva.pdf" class="link link--research">
+            <i class="fa-solid fa-file"></i> Paper
+          </a>
+          <a href="https://github.com/squaresLab/ML-Decompilation-Obfuscation" class="link link--research">
+            <i class="fa-brands fa-github"></i>
+            <span>Code</span>
+          </a>
+          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex1')">
+            <i class="fas fa-code"></i> BibTeX
+          </a>
+        </div>
+        <pre class="bibtex-block" id="bibtex1" style="display: none;">
 @inproceedings{dramko2025dimva,
   author    = {Luke Dramko and Deniz Bölöni-Turgut and Claire Le Goues and Edward Schwartz},
   title     = {Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement},
@@ -100,36 +119,41 @@ permalink: /research/
   year      = {2025}
 }
       </pre>
+      </div>
     </div>
 
     <div class="research-item published">
-      <p class="research-title">
-        Team cornell-1 at PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis
-      </p>
-      <p class="research-authors">
-        <strong>Deniz Bölöni-Turgut</strong> &middot; Dhriti Verma &middot; Claire Cardie
-      </p>
-      <p class="research-venue">
-        In Working Notes of CLEF 2025 - Conference and Labs of the Evaluation Forum, CEUR-WS.org
-      </p>
-      <div class="skill-tags">
-        <span class="skill-tag">Natural Language Processing</span>
-        <span class="skill-tag">Machine Learning</span>
-        <span class="skill-tag">Style Analysis</span>
-      </div>
-      <div class="research-links">
-        <a href="https://ceur-ws.org/Vol-4038/paper_286.pdf" class="link link--research" target="_blank">
-          <i class="fa-solid fa-file"></i> Paper
-        </a>
-        <a href="https://github.com/denizbt/pan-styleAnalysis25" class="link link--research">
-          <i class="fa-brands fa-github"></i>
-          <span>Code</span>
-        </a>
-        <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex2')">
-          <i class="fas fa-code"></i> BibTeX
-        </a>
-      </div>
-      <pre class="bibtex-block" id="bibtex2" style="display: none;">
+      {% include research-figure.html src=page.figures.pan.src alt=page.figures.pan.alt %}
+      <div class="research-details">
+        <h4 class="research-title">
+          <a href="https://ceur-ws.org/Vol-4038/paper_286.pdf" target="_blank" rel="noopener noreferrer">Team cornell-1
+            at
+            PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis</a>
+        </h4>
+        <p class="research-authors">
+          <u>Deniz Bölöni-Turgut</u>, Dhriti Verma, Claire Cardie
+        </p>
+        <p class="research-venue">
+          In Working Notes of CLEF 2025 - Conference and Labs of the Evaluation Forum, CEUR-WS.org
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">Natural Language Processing</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Style Analysis</span>
+        </div>
+        <div class="research-links">
+          <a href="https://ceur-ws.org/Vol-4038/paper_286.pdf" class="link link--research" target="_blank">
+            <i class="fa-solid fa-file"></i> Paper
+          </a>
+          <a href="https://github.com/denizbt/pan-styleAnalysis25" class="link link--research">
+            <i class="fa-brands fa-github"></i>
+            <span>Code</span>
+          </a>
+          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex2')">
+            <i class="fas fa-code"></i> BibTeX
+          </a>
+        </div>
+        <pre class="bibtex-block" id="bibtex2" style="display: none;">
 @inproceedings{boloniturgut-pan25,
   author    = {Deniz Boloni-Turgut, Dhriti Verma, Claire Cardie},
   title     = {Team cornell-1 at PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis},
@@ -137,6 +161,7 @@ permalink: /research/
   year      = {2025}
 }
       </pre>
+      </div>
     </div>
   </div>
 
@@ -149,13 +174,6 @@ permalink: /research/
         <span class="experience-date">Jan 2024 - Present</span>
       </div>
       <p class="experience-lab">Cornell University NLP Group, Advisor: Dr. Claire Cardie</p>
-
-      <div class="project-skills">
-        <img src="/assets/images/python-logo-only.svg">
-        <img src="/assets/images/pytorch-icon.svg">
-        <span class="hugging-face-emoji">🤗</span>
-        <i class="fa-brands fa-docker skill-icon"></i>
-      </div>
 
       <div class="research-proj-list">
         <div class="res-proj-item">
@@ -213,10 +231,7 @@ permalink: /research/
         obfuscated binary code, starting from open-source C-language repositories. Designed the data pipeline to
         automate GitHub scraping, obfuscation, and compilation with g++ and clang. Repurposed and refactored a
         large-scale Python codebase.</p>
-      <div class="project-skills">
-        <img src="/assets/images/python-logo-only.svg">
-        <img src="/assets/images/pytorch-icon.svg">
-        <i class="skill-icon fa-solid fa-shield"></i>
+      <div class="skill-tags">
         <span class="skill-tag">C/C++</span>
         <span class="skill-tag">Obfuscation</span>
       </div>
