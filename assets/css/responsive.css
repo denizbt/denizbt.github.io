@@ -63,7 +63,7 @@
     gap: 0;
     background: var(--color-bg);
     position: fixed;
-    top: var(--page-top-offset);
+    top: 0;
     left: 0;
     z-index: 1000;
   }
