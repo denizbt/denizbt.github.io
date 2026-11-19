@@ -197,3 +197,9 @@
   max-width: 46rem;
   color: var(--color-text);
 }
+
+/* Academicons render slightly smaller than Font Awesome; scale up to match */
+.social-icons .ai {
+  font-size: 1.2em;
+  vertical-align: -0.1em;
+}

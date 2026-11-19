@@ -1,0 +1,80 @@
+---
+layout: default
+title: CV
+nav_section: cv
+permalink: /cv/
+---
+
+<div class="page-hero">
+  <h2 class="page-title">CV <span class="page-tide" aria-hidden="true">𓊝</span></h2>
+</div>
+
+<section class="section-container section-panel cv-panel">
+  <div class="cv-actions">
+    <a href="/assets/files/denizbt_CV.pdf" class="cv-download-btn" download="Deniz_Boloni-Turgut_CV.pdf">
+      <i class="fas fa-download" aria-hidden="true"></i> Download CV
+    </a>
+    <a href="/assets/files/denizbt_CV.pdf" class="research-artifact" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-up-right-from-square" aria-hidden="true"></i> Open in new tab
+    </a>
+  </div>
+
+  <div class="cv-viewer" id="cv-viewer" aria-label="CV document">
+    <p class="cv-status" id="cv-status">Loading CV…</p>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  (function () {
+    const url = '/assets/files/denizbt_CV.pdf';
+    const viewer = document.getElementById('cv-viewer');
+    const status = document.getElementById('cv-status');
+
+    if (!window.pdfjsLib) {
+      status.innerHTML = 'Could not load the viewer. <a href="' + url + '" class="link link--external">Open the PDF directly</a>.';
+      return;
+    }
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    let pdfDoc = null;
+    let lastWidth = 0;
+
+    async function renderAll() {
+      const width = viewer.clientWidth;
+      if (!pdfDoc || width === lastWidth) return;
+      lastWidth = width;
+      const dpr = window.devicePixelRatio || 1;
+      const pages = [];
+
+      for (let n = 1; n <= pdfDoc.numPages; n++) {
+        const page = await pdfDoc.getPage(n);
+        const base = page.getViewport({ scale: 1 });
+        const viewport = page.getViewport({ scale: (width / base.width) * dpr });
+
+        const canvas = document.createElement('canvas');
+        canvas.className = 'cv-page';
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+        canvas.setAttribute('aria-label', 'CV page ' + n + ' of ' + pdfDoc.numPages);
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+        pages.push(canvas);
+      }
+      viewer.replaceChildren(...pages);
+    }
+
+    pdfjsLib.getDocument(url).promise.then(function (doc) {
+      pdfDoc = doc;
+      return renderAll();
+    }).catch(function () {
+      status.innerHTML = 'Could not display the CV here. <a href="' + url + '" class="link link--external">Open the PDF directly</a>.';
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(renderAll, 200);
+    });
+  })();
+</script>
