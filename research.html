@@ -36,7 +36,7 @@ figures:
           <u>Deniz Bölöni-Turgut</u>, Marzena Karpinska, John Wieting, Mohit Iyyer
         </p>
         <p class="research-venue">
-          arXiv preprint arXiv:2610.06778, 2026
+          arXiv preprint, 2026
         </p>
         <div class="skill-tags">
           <span class="skill-tag">Natural Language Processing</span>
@@ -54,11 +54,12 @@ figures:
             <i class="fa-solid fa-link"></i>
             <span>Demo</span>
           </a>
-          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex-idealens')">
-            <i class="fas fa-code"></i> BibTeX
-          </a>
+          <button type="button" class="link link--research bibtex-toggle" aria-expanded="false"
+            aria-controls="bibtex-idealens">
+            <i class="fas fa-code" aria-hidden="true"></i> BibTeX
+          </button>
         </div>
-        <pre class="bibtex-block" id="bibtex-idealens" style="display: none;">
+        {% capture bibtex %}
 @misc{rajendhran2026idealens,
   author        = {Rishanth Rajendhran and Minjoon Choi and Jenna Russell and Ramya Namuduri and Deniz Bölöni-Turgut and Marzena Karpinska and John Wieting and Mohit Iyyer},
   title         = "{IdeaLens}: Detecting {AI} Ideas in Long-form Writing",
@@ -68,7 +69,8 @@ figures:
   primaryClass  = {cs.CL},
   url           = {https://arxiv.org/abs/2610.06778}
 }
-      </pre>
+        {% endcapture %}
+        {% include bibtex.html id="bibtex-idealens" entry=bibtex %}
       </div>
     </div>
   </div>
@@ -107,18 +109,20 @@ figures:
             <i class="fa-brands fa-github"></i>
             <span>Code</span>
           </a>
-          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex1')">
-            <i class="fas fa-code"></i> BibTeX
-          </a>
+          <button type="button" class="link link--research bibtex-toggle" aria-expanded="false"
+            aria-controls="bibtex-dimva">
+            <i class="fas fa-code" aria-hidden="true"></i> BibTeX
+          </button>
         </div>
-        <pre class="bibtex-block" id="bibtex1" style="display: none;">
+        {% capture bibtex %}
 @inproceedings{dramko2025dimva,
   author    = {Luke Dramko and Deniz Bölöni-Turgut and Claire Le Goues and Edward Schwartz},
   title     = {Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement},
   booktitle = {Proceedings of the IEEE Conference on Detection of Intrusions, Malware, and Vulnerability Assessment},
   year      = {2025}
 }
-      </pre>
+        {% endcapture %}
+        {% include bibtex.html id="bibtex-dimva" entry=bibtex %}
       </div>
     </div>
 
@@ -148,18 +152,20 @@ figures:
             <i class="fa-brands fa-github"></i>
             <span>Code</span>
           </a>
-          <a class="link link--research" href="#" onclick="toggleContent(event, 'bibtex2')">
-            <i class="fas fa-code"></i> BibTeX
-          </a>
+          <button type="button" class="link link--research bibtex-toggle" aria-expanded="false"
+            aria-controls="bibtex-pan">
+            <i class="fas fa-code" aria-hidden="true"></i> BibTeX
+          </button>
         </div>
-        <pre class="bibtex-block" id="bibtex2" style="display: none;">
+        {% capture bibtex %}
 @inproceedings{boloniturgut-pan25,
-  author    = {Deniz Boloni-Turgut, Dhriti Verma, Claire Cardie},
+  author    = {Deniz Bölöni-Turgut and Dhriti Verma and Claire Cardie},
   title     = {Team cornell-1 at PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis},
   booktitle = {Experimental IR Meets Multilinguality, Multimodality, and Interaction. Proceedings of the Sixteenth International Conference of the CLEF Association (CLEF 2025)},
   year      = {2025}
 }
-      </pre>
+        {% endcapture %}
+        {% include bibtex.html id="bibtex-pan" entry=bibtex %}
       </div>
     </div>
   </div>
@@ -246,10 +252,66 @@ figures:
 </div>
 
 <script>
-  function toggleContent(event, id) {
-    event.preventDefault();
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.style.display = (el.style.display === "none" || el.style.display === "") ? "block" : "none";
+  document.querySelectorAll('.bibtex-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      const block = document.getElementById(toggle.getAttribute('aria-controls'));
+      if (!block) return;
+      const opening = block.hidden;
+      block.hidden = !opening;
+      toggle.setAttribute('aria-expanded', String(opening));
+    });
+  });
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    // Fallback for older browsers and plain-http local previews.
+    return new Promise(function (resolve, reject) {
+      const area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(area);
+      ok ? resolve() : reject(new Error('copy failed'));
+    });
+  }
+
+  document.querySelectorAll('.bibtex-copy').forEach(function (button) {
+    const icon = button.querySelector('i');
+    const label = button.querySelector('.bibtex-copy-label');
+    let resetTimer;
+
+    function show(state, text, iconClass) {
+      clearTimeout(resetTimer);
+      button.dataset.state = state;
+      label.textContent = text;
+      icon.className = iconClass;
+      resetTimer = setTimeout(function () {
+        delete button.dataset.state;
+        label.textContent = 'Copy';
+        icon.className = 'fa-regular fa-copy';
+      }, 1800);
+    }
+
+    button.addEventListener('click', function () {
+      const code = button.parentElement.querySelector('.bibtex-code');
+      copyText(code.textContent.trim()).then(
+        function () { show('copied', 'Copied!', 'fa-solid fa-check'); },
+        function () { show('error', 'Copy failed', 'fa-solid fa-xmark'); selectCode(code); }
+      );
+    });
+  });
+
+  function selectCode(code) {
+    const range = document.createRange();
+    range.selectNodeContents(code);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
   }
 </script>

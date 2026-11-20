@@ -2,12 +2,12 @@
   --font: "Open Sans", "Lato", sans-serif;
   --font-serif: "Lora", "Roboto Mono", serif;
   --color-bg: #fcfaf6;
-  --main-blue: #2b76a8;
-  --light-blue: #c5dce5;
+  --main-blue: #186891;
+  --light-blue: #cfe3ed;
   --color-text: #0b0b0b;
-  --surface-color: #f0eadf;
-  --color-rule: #ddd7ca;
-  --color-warm-ink: #805d49;
+  --surface-color: #efe4d6;
+  --color-rule: #dccab3;
+  --color-warm-ink: #885930;
   --body-text: 14.5px;
   --sidebar-text-size: calc(var(--body-text) + 1pt);
   --home-page-width: 100%;

@@ -184,7 +184,7 @@
 }
 
 .published .research-figure-placeholder {
-  background: #f1eade;
+  background: var(--surface-color);
   color: var(--color-warm-ink);
 }
 
@@ -275,23 +275,89 @@
   gap: 0.75rem 1rem;
 }
 
-.research-links a {
+.research-links > * {
   white-space: nowrap;
 }
 
+/* The BibTeX toggle is a <button> styled to match the neighbouring links. */
+.bibtex-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .bibtex-block {
+  display: flow-root;
   box-sizing: border-box;
-  overflow-wrap: anywhere;
-  background-color: var(--surface-color);
-  padding: 0.75rem 1rem;
-  font-size: var(--body-text);
-  font-family: monospace;
-  white-space: pre-wrap;
-  margin: 0.5rem 0 0 0;
   max-width: 100%;
-  display: block;
-  border-radius: 2px;
+  margin: 0.75rem 0 0;
+  padding: 0.75rem 1rem;
+  background-color: var(--surface-color);
   border: 1px solid var(--color-rule);
+  border-radius: 6px;
+}
+
+.bibtex-block[hidden] {
+  display: none;
+}
+
+/* Floated so long first lines wrap around it instead of running underneath. */
+.bibtex-copy {
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: -0.2rem -0.35rem 0.2rem 0.75rem;
+  padding: 0.15rem 0.6rem;
+  font-family: var(--font);
+  font-size: calc(var(--body-text) - 2px);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+  color: var(--color-warm-ink);
+  background: var(--color-bg);
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.bibtex-copy:hover {
+  border-color: var(--color-warm-ink);
+}
+
+.bibtex-copy[data-state="copied"] {
+  color: var(--main-blue);
+  border-color: var(--main-blue);
+}
+
+.bibtex-code {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: calc(var(--body-text) - 1.5px);
+  line-height: 1.55;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.bibtex-code code {
+  font: inherit;
+}
+
+/* On phones, give the copy button its own row so the citation key isn't split. */
+@media (max-width: 576px) {
+  .bibtex-copy {
+    float: none;
+    display: flex;
+    width: fit-content;
+    margin: -0.25rem -0.4rem 0.4rem auto;
+  }
+
+  .bibtex-code {
+    font-size: 13px;
+  }
 }
 
 .research-experience {
@@ -342,7 +408,7 @@
 .research-proj-list {
   margin-top: 1rem;
   padding-left: 1rem;
-  border-left: 2px solid rgba(44, 128, 184, 0.16);
+  border-left: 2px solid color-mix(in srgb, var(--main-blue) 18%, transparent);
 }
 
 .res-proj-item {

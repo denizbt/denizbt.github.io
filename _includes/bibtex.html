@@ -1,0 +1,19 @@
+{% comment %}
+  Collapsible BibTeX block with a copy button.
+  Usage:
+    {% capture bibtex %}
+    @inproceedings{key, ... }
+    {% endcapture %}
+    {% include bibtex.html id="bibtex-key" entry=bibtex %}
+  Pair it with a toggle button in .research-links:
+    <button type="button" class="link link--research bibtex-toggle"
+      aria-expanded="false" aria-controls="bibtex-key">...</button>
+  The entry is stripped, so surrounding whitespace never renders as blank lines.
+{% endcomment %}
+<div class="bibtex-block" id="{{ include.id }}" hidden>
+  <button type="button" class="bibtex-copy" title="Copy BibTeX to clipboard">
+    <i class="fa-regular fa-copy" aria-hidden="true"></i>
+    <span class="bibtex-copy-label" aria-live="polite">Copy</span>
+  </button>
+  <pre class="bibtex-code"><code>{{ include.entry | strip | escape }}</code></pre>
+</div>
