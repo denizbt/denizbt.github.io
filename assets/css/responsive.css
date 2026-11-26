@@ -22,7 +22,6 @@
     align-items: flex-start;
   }
 
-  .subtitle,
   .bio {
     max-width: 100%;
   }
@@ -66,10 +65,6 @@
     top: 0;
     left: 0;
     z-index: 1000;
-  }
-
-  .sidebar.is-scrolled {
-    box-shadow: 0 8px 24px rgba(31, 82, 117, 0.1);
   }
 
   .sidebar-top {
@@ -164,8 +159,7 @@
     margin-bottom: 2px;
   }
 
-  .pronunciation,
-  .subtitle {
+  .pronunciation {
     font-size: 18px;
   }
 
@@ -206,8 +200,7 @@
     margin-bottom: 2px;
   }
 
-  .pronunciation,
-  .subtitle {
+  .pronunciation {
     font-size: 16px;
   }
 
@@ -255,8 +248,7 @@
     font-size: 24px;
   }
 
-  .pronunciation,
-  .subtitle {
+  .pronunciation {
     font-size: 15px;
   }
 

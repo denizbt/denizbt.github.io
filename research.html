@@ -5,15 +5,18 @@ nav_section: research
 permalink: /research/
 # Add image paths and descriptive alt text here to fill the figure slots.
 figures:
+  frontier:
+    src: "/assets/images/unmask_fig.png"
+    alt: "Overview of results: Claude Fable 5.2 identifies whether a text is written by AI or a human, which AI lab wrote it, and which human wrote it, with example explanations."
   idealens:
     src: "/assets/images/idealens_fig.png"
-    alt: ""
+    alt: "Detection accuracy of IdeaLens, ProseLens, Pangram 4, and EditLens-3B in four settings, defined by whether the ideas and the prose come from a person or an AI. All detectors score above 99 when both are human. When people rewrite AI ideas, IdeaLens scores 68.0, 60 points above Pangram 4. When AI rewrites a person's ideas, IdeaLens scores 94.7, 22.6 points above EditLens-3B."
   decompilation:
     src: "/assets/images/decomp_fig.png"
-    alt: "Process of decompiling a program with deterministic decompiler like Hex-Rays."
+    alt: "The decompilation process: C source code is compiled into executable binaries without debug information, which loses comments, variable names, and types. A decompiler (IDA Hex-Rays) turns the binaries back into C code with generic variable names and types."
   pan:
     src: "/assets/images/pan_fig.png"
-    alt: ""
+    alt: "System pipeline: sentences from each problem are split into consecutive sentence pairs, several fine-tuned BERT-style models score each pair, their outputs are ensembled by averaging probabilities or logits, and a threshold tuned on validation data gives the final same-author or different-author predictions."
 ---
 
 <div class="page-hero">
@@ -23,6 +26,52 @@ figures:
 <div class="section-container section-panel research-panel">
   <div class="research-section preprints">
     <h3 class="research-subsection-header">Preprints</h3>
+
+    <div class="research-item preprint">
+      {% include research-figure.html src=page.figures.frontier.src alt=page.figures.frontier.alt %}
+      <div class="research-details">
+        <h4 class="research-title">
+          <a href="https://arxiv.org/pdf/2611.26216" target="_blank"
+            rel="noopener noreferrer">Frontier Models Need Only One Text to Unmask Its Human or AI Author</a>
+        </h4>
+        <p class="research-authors">
+          Atrey Desai<sup>*</sup>, <u>Deniz Bölöni-Turgut</u><sup>*</sup>, Ty Brassington<sup>*</sup>,
+          Minjoon Choi<sup>*</sup>, Jenna Russell<sup>*</sup>, Rishanth Rajendhran<sup>*</sup>, Bradley Emi,
+          Hila Gonen, Hal Daumé III, John Wieting, Marzena Karpinska, Mohit Iyyer
+        </p>
+        <p class="research-venue">
+          arXiv preprint, 2026 (*equal contribution)
+        </p>
+        <div class="skill-tags">
+          <span class="skill-tag">Authorship Attribution</span>
+          <span class="skill-tag">AI Text Detection</span>
+        </div>
+        <div class="research-links">
+          <a href="https://arxiv.org/pdf/2611.26216" class="link link--research">
+            <i class="fa-solid fa-file"></i> Paper
+          </a>
+          <a href="https://github.com/denizbt/unmasking_authors" class="link link--research">
+            <i class="fa-brands fa-github"></i>
+            <span>Code</span>
+          </a>
+          <button type="button" class="link link--research bibtex-toggle" aria-expanded="false"
+            aria-controls="bibtex-frontier">
+            <i class="fas fa-code" aria-hidden="true"></i> BibTeX
+          </button>
+        </div>
+        {% capture bibtex %}
+@misc{desai-boloniturgut2026unmask,
+  author        = {Atrey Desai and Deniz Bölöni-Turgut and Ty Brassington and Minjoon Choi and Jenna Russell and Rishanth Rajendhran and Bradley Emi and Hila Gonen and Hal Daumé III and John Wieting and Marzena Karpinska and Mohit Iyyer},
+  title         = {Frontier Models Need Only One Text to Unmask Its Human or {AI} Author},
+  year          = {2026},
+  eprint        = {2611.26216},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2611.26216}
+}
+        {% endcapture %}
+        {% include bibtex.html id="bibtex-frontier" entry=bibtex %}
+      </div>
+    </div>
 
     <div class="research-item preprint">
       {% include research-figure.html src=page.figures.idealens.src alt=page.figures.idealens.alt %}
@@ -44,7 +93,7 @@ figures:
         </div>
         <div class="research-links">
           <a href="https://arxiv.org/pdf/2610.06778" class="link link--research">
-            <i class="fa-solid fa-file"></i> arXiv
+            <i class="fa-solid fa-file"></i> Paper
           </a>
           <a href="https://github.com/RishanthRajendhran/IdeaLens" class="link link--research">
             <i class="fa-brands fa-github"></i>
@@ -118,8 +167,11 @@ figures:
 @inproceedings{dramko2025dimva,
   author    = {Luke Dramko and Deniz Bölöni-Turgut and Claire Le Goues and Edward Schwartz},
   title     = {Quantifying and Mitigating the Impact of Obfuscations on Machine-Learning-Based Decompilation Improvement},
-  booktitle = {Proceedings of the IEEE Conference on Detection of Intrusions, Malware, and Vulnerability Assessment},
-  year      = {2025}
+  booktitle = {Detection of Intrusions and Malware, and Vulnerability Assessment ({DIMVA} 2025)},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year      = {2025},
+  doi       = {10.1007/978-3-031-97620-9_14}
 }
         {% endcapture %}
         {% include bibtex.html id="bibtex-dimva" entry=bibtex %}
@@ -160,9 +212,13 @@ figures:
         {% capture bibtex %}
 @inproceedings{boloniturgut-pan25,
   author    = {Deniz Bölöni-Turgut and Dhriti Verma and Claire Cardie},
-  title     = {Team cornell-1 at PAN: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis},
-  booktitle = {Experimental IR Meets Multilinguality, Multimodality, and Interaction. Proceedings of the Sixteenth International Conference of the CLEF Association (CLEF 2025)},
-  year      = {2025}
+  title     = {Team cornell-1 at {PAN}: Ensembling Fine-Tuned Transformer Models for Writing Style Analysis},
+  booktitle = {Working Notes of {CLEF} 2025 -- Conference and Labs of the Evaluation Forum},
+  series    = {CEUR Workshop Proceedings},
+  volume    = {4038},
+  publisher = {CEUR-WS.org},
+  year      = {2025},
+  url       = {https://ceur-ws.org/Vol-4038/paper_286.pdf}
 }
         {% endcapture %}
         {% include bibtex.html id="bibtex-pan" entry=bibtex %}
@@ -175,10 +231,27 @@ figures:
 
     <div class="research-experience">
       <div class="experience-header">
+        <h4 class="experience-title">Research Assistant</h4>
+        <span class="experience-date">Aug 2026 - present</span>
+      </div>
+      <p class="experience-lab">University of Maryland, Advisors: Prof. Mohit Iyyer,
+        Prof. Hal Daumé III</p>
+    </div>
+
+    <div class="research-experience">
+      <div class="experience-header">
+        <h4 class="experience-title">Research Assistant (Parameter Efficient ML)</h4>
+        <span class="experience-date">Aug 2025 - Oct 2026</span>
+      </div>
+      <p class="experience-lab">University of Central Florida, Advisor: Prof. Aritra Dutta</p>
+    </div>
+
+    <div class="research-experience">
+      <div class="experience-header">
         <h4 class="experience-title">Undergraduate Researcher</h4>
         <span class="experience-date">Jan 2024 - May 2026</span>
       </div>
-      <p class="experience-lab">Cornell University NLP Group, Advisor: Dr. Claire Cardie</p>
+      <p class="experience-lab">Cornell University, Advisors: Prof. Claire Cardie, Prof. Tanya Goyal</p>
 
       <div class="research-proj-list">
         <div class="res-proj-item">
@@ -199,7 +272,7 @@ figures:
 
         <div class="res-proj-item">
           <p class="res-proj-name">commit0</p>
-          <p class="res-proj-desc">Research LLM coding agents ability to implement Python packages given only textual
+          <p class="res-proj-desc">Research LLM coding agents' ability to implement Python packages given only textual
             specifications and a unit test suite, i.e. starting from commit0 of a GitHub repository.</p>
           <a href="https://github.com/MaxWhitton25/multi-agent-repo-completion" class="research-artifact"
             target="_blank">
@@ -215,7 +288,7 @@ figures:
               href="https://arxiv.org/pdf/2412.04363" class="link link--external">NAACL 2025 Findings paper.</a></p>
           <a href="/assets/files/bure_poster_session.pdf" class="research-artifact" target="_blank"
             rel="noopener noreferrer">
-            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-chalkboard"></i>
             <span>Research Poster</span></a>
         </div>
       </div>
@@ -223,35 +296,58 @@ figures:
 
     <div class="research-experience">
       <div class="experience-header">
-        <h4 class="experience-title">Research Assistant</h4>
-        <span class="experience-date">May 2023 - May 2024</span>
+        <h4 class="experience-title">Undergraduate Research Assistant (ML for Software)</h4>
+        <span class="experience-date">May 2023 - May 2025</span>
       </div>
-      <p class="experience-lab">Carnegie Mellon University, <a href="https://www.cmu.edu/scs/s3d/reuse/"
-          class="link link--external">REU in Software Engineering</a>, Advisor: Dr. Claire Le Goues</p>
-      <p class="experience-description">Developed neural approaches to decompilation (converting machine code back
-        into source code) of C programs with applications in malware analysis. Compiled a 800GB+ novel dataset of
+      <p class="experience-lab">Carnegie Mellon University, Advisor: Prof.
+        Claire Le Goues</p>
+      <p class="experience-description">Neural decompilation (converting machine code back
+        into source code) of obfuscated C programs with applications in malware analysis. Compiled an 800GB+ novel dataset of
         obfuscated binary code, starting from open-source C-language repositories. Designed the data pipeline to
-        automate GitHub scraping, obfuscation, and compilation with g++ and clang. Repurposed and refactored a
-        large-scale Python codebase.</p>
-      <div class="skill-tags">
-        <span class="skill-tag">C/C++</span>
-        <span class="skill-tag">Obfuscation</span>
-      </div>
-      <div class="outcome-highlight">
-        <p class="outcome-title">Outcome</p>
-        <p class="outcome-desc">Published paper in Detection of
-          Intrusions and Malware &amp; Vulnerability Assessment (DIMVA) 2025</p>
-      </div>
-
-      <a href="/assets/files/cmu_reuse_poster.pdf" class="research-artifact" target="_blank" rel="noopener noreferrer">
+        automate GitHub scraping, obfuscation, and compilation with g++ and clang.</p>
+      <a href="https://squareslab.github.io/materials/dramko2025dimva.pdf" class="research-artifact" target="_blank"
+        rel="noopener noreferrer">
         <i class="fa-solid fa-file"></i>
+        <span>Paper</span>
+      </a>
+      <a href="/assets/files/cmu_reuse_poster.pdf" class="research-artifact" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-chalkboard"></i>
         <span>Research Poster</span>
       </a>
     </div>
   </div>
 </div>
 
+<dialog class="figure-lightbox" id="figure-lightbox" aria-label="Enlarged figure">
+  <button type="button" class="figure-lightbox-close" aria-label="Close enlarged figure">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <img alt="">
+</dialog>
+
 <script>
+  // Figure zoom: open the figure in an in-page dialog instead of a new tab.
+  // Cmd/Ctrl/Shift-click still follows the link, as does any browser without <dialog>.
+  (function () {
+    const lightbox = document.getElementById('figure-lightbox');
+    if (!lightbox || typeof lightbox.showModal !== 'function') return;
+    const zoomed = lightbox.querySelector('img');
+
+    document.querySelectorAll('.research-figure-link').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const thumb = link.querySelector('img');
+        zoomed.src = link.href;
+        zoomed.alt = thumb ? thumb.alt : '';
+        lightbox.showModal();
+      });
+    });
+
+    // Clicking anywhere (image, backdrop or close button) closes; Escape is handled by <dialog>.
+    lightbox.addEventListener('click', function () { lightbox.close(); });
+  })();
+
   document.querySelectorAll('.bibtex-toggle').forEach(function (toggle) {
     toggle.addEventListener('click', function () {
       const block = document.getElementById(toggle.getAttribute('aria-controls'));

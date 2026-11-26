@@ -4,6 +4,4 @@ url: "https://denizbt.github.io/"
 # Keep GitHub Pages' default theme from replacing the site's custom CSS.
 theme: null
 markdown: kramdown
-kramdown:
-  math_engine: mathjax
-exclude: [README.md]
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]

@@ -1,7 +1,7 @@
 <figure class="research-figure">
   {% if include.src and include.src != empty %}
   <a class="research-figure-link" href="{{ include.src | relative_url | escape }}" target="_blank"
-    rel="noopener noreferrer" aria-label="View full-size research figure">
+    rel="noopener noreferrer" aria-label="Enlarge figure">
     <img src="{{ include.src | relative_url | escape }}"
       alt="{{ include.alt | default: 'Figure from this paper' | escape }}"
       width="480" height="360" loading="lazy" decoding="async">

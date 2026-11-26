@@ -17,11 +17,6 @@
   box-sizing: border-box;
   align-items: flex-end;
   text-align: right;
-  transition: box-shadow 0.25s ease;
-}
-
-.sidebar.is-scrolled {
-  box-shadow: 10px 0 30px rgba(31, 82, 117, 0.09);
 }
 
 .sidebar-name,
@@ -179,16 +174,6 @@
 .pronunciation .link--icon {
   margin-left: 0.35rem;
   font-size: 0.85rem;
-}
-
-/* the thing that used to say "researcher, software developer, book lover" */
-.subtitle {
-  font-family: var(--font);
-  margin: 0.5rem 0 0;
-  font-size: 1rem;
-  font-style: italic;
-  color: #4e6170;
-  max-width: 42rem;
 }
 
 .bio {

@@ -157,6 +157,92 @@
 
 .research-figure-link {
   display: block;
+  cursor: zoom-in;
+}
+
+.research-figure-link img {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.research-figure-link:hover img,
+.research-figure-link:focus-visible img {
+  border-color: var(--main-blue);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Enlarged figure shown in a modal <dialog> when a thumbnail is clicked. */
+.figure-lightbox {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-width: 94vw;
+  max-height: 92vh;
+  overflow: visible;
+  cursor: zoom-out;
+}
+
+.figure-lightbox::backdrop {
+  background: rgba(24, 20, 16, 0.72);
+}
+
+.figure-lightbox img {
+  display: block;
+  max-width: 94vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.figure-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.figure-lightbox[open] img {
+  animation: figure-zoom-in 0.2s ease-out;
+}
+
+.figure-lightbox[open]::backdrop {
+  animation: figure-fade-in 0.2s ease-out;
+}
+
+@keyframes figure-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes figure-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure-lightbox[open] img,
+  .figure-lightbox[open]::backdrop {
+    animation: none;
+  }
+}
+
+/* Stop the page behind the enlarged figure from scrolling. */
+html:has(.figure-lightbox[open]) {
+  overflow: hidden;
 }
 
 .research-figure img,
@@ -361,7 +447,7 @@
 }
 
 .research-experience {
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 
 .experience-header {
@@ -425,26 +511,6 @@
 .res-proj-desc {
   font-size: var(--body-text);
   color: #333;
-  margin: 0;
-}
-
-.outcome-highlight {
-  background-color: var(--surface-color);
-  padding: 0.8rem 1rem;
-  border-radius: 16px;
-  margin: 1rem 0;
-}
-
-.outcome-title {
-  font-family: var(--font-serif);
-  font-weight: var(--fw-medium);
-  color: var(--main-blue);
-  margin: 0 0 0.3rem 0;
-}
-
-.outcome-desc {
-  font-size: var(--body-text);
-  color: #555;
   margin: 0;
 }
 
